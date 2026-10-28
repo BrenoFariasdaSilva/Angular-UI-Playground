@@ -132,7 +132,7 @@ Discuss the results obtained in the project.
 
 ## How to Cite?
 
-If you use the Repository-Name in your research, please cite it using the following BibTeX entry:
+If you use the Angular-UI-Playground in your research, please cite it using the following BibTeX entry:
 
 ```
 % Tools:
