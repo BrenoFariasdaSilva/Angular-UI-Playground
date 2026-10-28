@@ -135,13 +135,16 @@ Discuss the results obtained in the project.
 If you use the Repository-Name in your research, please cite it using the following BibTeX entry:
 
 ```
-@misc{softwareRepository-Name:2024,
-  title = {Repository-Name: Project-Description},
+% Tools:
+
+@misc{softwareAngular-UI-Playground:2026,
+  title = {Angular-UI-Playground: A hands-on Angular learning project exploring routing, forms, signals, components, PrimeNG UI widgets, and Tailwind CSS},
   author = {Breno Farias da Silva},
-  year = {2024},
-  howpublished = {https://github.com/BrenoFariasdaSilva/Repository-Name},
-  note = {Accessed on September 11, 2024}
+  year = {2026},
+  howpublished = {https://github.com/BrenoFariasdaSilva/Angular-UI-Playground},
+  note = {Accessed on November 3, 2026}
 }
+
 ```
 
 Additionally, a `main.bib` file is available in the root directory of this repository, in which contains the BibTeX entry for this project.
