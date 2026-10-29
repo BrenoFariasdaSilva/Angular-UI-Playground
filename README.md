@@ -8,7 +8,17 @@
   
 ---
 
-Project-Description.
+<p>
+  <strong>Angular UI Playground</strong> is a hands-on learning project for exploring modern Angular development through small, practical examples. It covers standalone components, routing, data binding, signals, reusable components, events, forms, pipes, and UI state.
+</p>
+
+<p>
+  The project integrates <strong>PrimeNG</strong> and <strong>Tailwind CSS</strong> to build polished interfaces, including a globally available <code>p-drawer</code> navigation menu and a dedicated, independently routed PrimeNG component gallery. The gallery demonstrates controls such as buttons, input groups, date pickers, list boxes, sliders, tables, dialogs, messages, cards, panels, tags, and pagination.
+</p>
+
+<p>
+  It is intentionally a playground rather than a production application: a space to experiment, learn, and understand how Angular features and third-party UI libraries work together.
+</p>
   
 ---
 
