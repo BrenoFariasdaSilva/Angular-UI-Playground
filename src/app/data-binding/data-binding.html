@@ -1,0 +1,19 @@
+<!-- Property Binding uses square brackets [] to send data from the component to the template. -->
+<!-- Event Binding uses parentheses () to respond to events in the template and execute component logic. -->
+
+<!-- Manual two-way data binding -->
+<input
+  [value]="name"
+  (input)="name = $any($event.target).value"
+  type="text"
+  placeholder="Enter your name (Manual)"
+/>
+
+<!-- Automatic two-way data binding (import FormsModule) -->
+<input
+  [(ngModel)]="name"
+  type="text"
+  placeholder="Enter your name (Automatic)"
+/>
+
+{{ name }}
