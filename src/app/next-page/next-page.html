@@ -1,0 +1,35 @@
+<!-- Angular template for the NextPage route. -->
+<!-- Static page content rendered when the /next-page route is active. -->
+<p>Welcome to the next page!</p>
+
+<!-- The label's for attribute associates it with the input's id. -->
+<label for="price"> Type Price (0-100):</label>
+
+<!-- Native number input with browser constraints; Angular bindings below also update component state. -->
+<!-- [ngModel] sends component state to the input; (ngModelChange) sends edits to the range-checking method. -->
+<input
+  type="number"
+  id="price"
+  name="price"
+  min="0"
+  max="100"
+  step="2"
+  [ngModel]="price"
+  (ngModelChange)="updatePrice($event); priceChangeCounter.increment()"
+/>
+
+<!-- The child counter uses a signal and increments whenever the input value changes. -->
+<app-counter #priceChangeCounter></app-counter>
+
+<!-- Interpolation displays the current price, and CurrencyPipe formats it as euros. -->
+<p>Price: {{ price | currency:'EUR' }}</p>
+<p>Price: {{ price * eurUsdRatio | currency:'USD' }}</p>
+
+<br>
+
+<!-- RouterLink is an Angular directive that navigates to the root route without reloading the page. -->
+<button routerLink="/home">Go back to home page</button>
+
+<hr />
+
+Input: <app-data-binding></app-data-binding>

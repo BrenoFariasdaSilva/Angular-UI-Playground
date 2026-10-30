@@ -1,0 +1,5 @@
+/* Styles specific to the NextPage component. */
+:host {
+  display: block;
+  padding: 5rem 1rem 1rem;
+}
