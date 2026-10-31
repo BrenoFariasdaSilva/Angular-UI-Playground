@@ -1,0 +1,19 @@
+<button class="drawer-trigger" type="button" aria-label="Open navigation" (click)="openDrawer()">
+  <span aria-hidden="true">☰</span>
+</button>
+
+<p-drawer [(visible)]="visible" [showCloseIcon]="false">
+  <div class="drawer-panel">
+    <header class="drawer-header">
+      <h2 id="drawer-title">Navigation</h2>
+      <button type="button" aria-label="Close navigation" (click)="closeDrawer()">×</button>
+    </header>
+    <p>A slide-in panel from the edge of the screen for contextual content. Links are sorted automatically by label; Home stays first.</p>
+
+    <nav aria-label="Page navigation">
+      @for (item of navigation; track item.path) {
+        <button type="button" [routerLink]="item.path" (click)="closeDrawer()">{{ item.label }}</button>
+      }
+    </nav>
+  </div>
+</p-drawer>
