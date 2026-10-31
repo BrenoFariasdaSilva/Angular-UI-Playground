@@ -1,0 +1,74 @@
+<form
+  [formGroup]="loginForm"
+  (ngSubmit)="loginForm.valid && submitForm($event)"
+  class="flex min-h-screen flex-col items-center justify-center gap-4 px-4"
+>
+  <h1 class="text-center text-2xl font-bold">
+    Reactive Registration Form
+  </h1>
+
+  <p class="max-w-md text-center text-sm text-gray-600">
+    Reactive Forms define controls and validation in TypeScript
+    using FormGroup, FormControl, and Validators, while
+    Template-Driven Forms rely mainly on HTML and ngModel.
+  </p>
+
+  <!-- Username -->
+  <input
+    name="username"
+    type="text"
+    placeholder="Username"
+    formControlName="username"
+    autocomplete="username"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Phone Number -->
+  <input
+    name="phone"
+    type="text"
+    inputmode="numeric"
+    pInputMask="(99) 99999-9999"
+    placeholder="Phone Number"
+    formControlName="phone"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Birthdate -->
+  <input
+    name="birthdate"
+    type="text"
+    inputmode="numeric"
+    pInputMask="99/99/9999"
+    placeholder="Birthdate - dd/mm/yyyy"
+    formControlName="birthdate"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Password -->
+  <input
+    name="password"
+    type="password"
+    placeholder="Password"
+    formControlName="password"
+    autocomplete="new-password"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Validation Errors -->
+  @if (loginForm.invalid && (loginForm.touched || loginForm.dirty)) {
+    <p class="max-w-xs text-center text-sm text-red-600">
+      Invalid registration information. Complete all fields
+      using the required formats. Username must have at least
+      3 characters and password at least 8 characters.
+    </p>
+  }
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="w-64 cursor-pointer rounded-md border border-gray-400 px-4 py-2 hover:bg-gray-100"
+  >
+    Register
+  </button>
+</form>
