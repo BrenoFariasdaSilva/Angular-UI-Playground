@@ -1,0 +1,64 @@
+
+<!-- Interpolation -->
+<p>Sum of 2 + 2 = {{ 2 + 2 }}</p>
+
+<p>2 == 2 = {{ firstNumber === firstNumber || 'Unknown' }}</p>
+
+<p>2 == 3 = {{ firstNumber === secondNumber || 'Unknown' }}</p>
+
+<p>2 == 3 = {{ firstNumber === secondNumber ? 'Equal' : 'Not Equal' }}</p>
+
+<p>2 == '2' = {{ $any(2) == '2' }} (Loose equality. Allows implicit type coercion.)</p>
+
+<p>2 === '2' = {{ $any(2) === '2' }} (Strict equality. Does not allow implicit type coercion.)</p>
+
+<h2>
+  {{ new_title }}
+</h2>
+
+<!-- Properties/Attributes -->
+<input [type]="inputType">
+
+<!-- Event Binding -->
+<button class="bg-amber-800 px-5 py-10" (click)="notify('null')"> Click Me </button>
+
+<br>
+<br>
+
+<!-- Template -->
+<span> Please enter your name: </span>
+<input #yourName [type]="inputType">
+<button (click)="notify(yourName.value)">Click Me</button>
+
+<br>
+<br>
+
+<!-- Template Conditional (ngIf and @if) -->
+<!-- Note that the buttons aint simply hidden in the inspect console, but really is removed of the document code -->
+<button *ngIf="true"> Click Me (Deprecated) </button> <br>
+
+@if (true) {
+  <button>Click Me</button>
+}
+<br>
+
+<!-- This way the Click Me Button actually is in the document, but hidden -->
+<button [hidden]="false"> Unhidden Click Me Button </button>
+<button [hidden]="true"> Hidden Click Me Button </button>
+<br>
+
+<!-- For -->
+<br>
+<div>
+  @for (person of data; track person.name) {
+    <div>
+      {{ person.name }} - {{ person.position }}
+    </div>
+  }
+</div>
+
+<!-- Angular-Components -->
+<app-notification-button-click [text]="title()" (buttonClicked)="notifyButton($event)"></app-notification-button-click>
+
+<!-- Routing -->
+<button routerLink="/next-page">Go to the next page</button>
