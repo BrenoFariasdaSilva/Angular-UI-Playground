@@ -1,0 +1,18 @@
+<p-drawer [(visible)]="drawerVisible" header="PrimeNG components" styleClass="component-drawer">
+  <nav aria-label="PrimeNG component navigation">
+    @for (item of navigation; track item.path) {
+      <a [routerLink]="item.path" routerLinkActive="active-link" (click)="drawerVisible = false">{{ item.label }}</a>
+    }
+  </nav>
+</p-drawer>
+
+<main class="gallery-shell">
+  <header>
+    <button pButton type="button" label="Browse components" (click)="drawerVisible = true"></button>
+    <div>
+      <p class="eyebrow">PrimeNG 22 gallery</p>
+      <h1>Component playground</h1>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+</main>
