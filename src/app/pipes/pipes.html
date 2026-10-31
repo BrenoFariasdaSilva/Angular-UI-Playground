@@ -1,0 +1,53 @@
+<!-- DatePipe formats a JavaScript Date; its format string controls the displayed date. -->
+<p>Short date: {{ today | date:'shortDate' }}</p>
+
+<!-- PercentPipe converts a decimal fraction to a percentage. -->
+<p>Completion: {{ completionRate | percent:'1.0-2' }}</p>
+
+<!-- DecimalPipe formats a number with grouping and a chosen number of decimal places. -->
+<p>Quantity: {{ quantity | number:'1.2-2' }}</p>
+
+<!-- Text pipes change letter case or capitalize words for display. -->
+<p>Uppercase: {{ sampleText | uppercase }}</p>
+<p>Lowercase: {{ sampleText | lowercase }}</p>
+<p>Title case: {{ sampleText | titlecase }}</p>
+
+<!-- SlicePipe returns a portion of a string without changing the original value. -->
+<p>First 14 characters: {{ sampleText | slice:0:14 }}</p>
+
+<!-- JsonPipe serializes an object, which is useful for displaying/debugging its contents. -->
+<pre>{{ exampleObject | json }}</pre>
+
+<!-- Custom Pipe -->
+
+<!-- Start an HTML table to display the transaction records in rows and columns. -->
+<table>
+  <!-- The table head contains labels that describe each column. -->
+  <thead>
+    <!-- A table row groups the column headers together. -->
+    <tr>
+      <!-- Header cell for the transaction date column. -->
+      <th>Date</th>
+      <!-- Header cell for the original transaction amount. -->
+      <th>Amount</th>
+      <!-- Header cell for the calculated interest amount. -->
+      <th>Interest</th>
+    </tr>
+  </thead>
+  <!-- The table body contains the transaction data rows. -->
+  <tbody>
+    <!-- Angular @for creates one table row per transaction; amount identifies each row. -->
+    @for (transaction of transactions; track transaction.amount) {
+      <!-- Each transaction is displayed as one table row. -->
+      <tr>
+        <!-- DatePipe formats the date as day/month/year and uses UTC to avoid timezone shifts. -->
+        <td>{{ transaction.date | date:'dd/MM/yyyy':'UTC' }}</td>
+        <!-- CurrencyPipe formats the transaction amount as currency. -->
+        <td>{{ transaction.amount | currency }}</td>
+        <!-- The interest pipe calculates interest; CurrencyPipe formats the result as currency. -->
+        <td>{{ transaction.amount | interest:0.025 | currency }}</td>
+      </tr>
+    }
+  </tbody>
+  <!-- Close the table after all transaction rows have been rendered. -->
+</table>
