@@ -1,0 +1,121 @@
+
+<main class="profile-page">
+  <section class="profile-card" aria-labelledby="profile-page-title">
+    <span class="profile-eyebrow">ACCOUNT SETTINGS</span>
+    <h1 id="profile-page-title">Your profile</h1>
+    <p>Keep your contact details up to date.</p>
+
+    @if (!visible) {
+      <!-- Hide the trigger while the modal dialog is open. -->
+      <button
+        type="button"
+        pButton
+        (click)="openDialog()"
+        class="profile-edit-button"
+      >
+        <span pButtonLabel>Edit Profile</span>
+      </button>
+    }
+  </section>
+
+  <!-- Edit Profile Dialog -->
+  <p-dialog
+    [(visible)]="visible"
+    [modal]="true"
+    [draggable]="false"
+    [resizable]="false"
+    header="Edit Profile"
+    styleClass="profile-dialog"
+    [style]="{
+      width: 'min(28rem, calc(100vw - 2rem))',
+      maxWidth: 'calc(100vw - 2rem)'
+    }"
+  >
+
+    <!-- Description -->
+    <p class="dialog-description">
+      Update your personal information below.
+    </p>
+
+    <!-- Form Fields -->
+    <div class="profile-fields">
+    @if (errorMessage) {
+    <p class="profile-error" role="alert">{{ errorMessage }}</p>
+    }
+
+    <!-- Name -->
+    <div class="profile-field">
+      <label
+        pLabel
+        for="name"
+      >
+          Full Name
+        </label>
+
+        <input
+          pInputText
+          id="name"
+          name="name"
+          type="text"
+          [(ngModel)]="name"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          class="w-full"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="profile-field">
+        <label
+          pLabel
+          for="email"
+        >
+          Email Address
+        </label>
+
+        <input
+          pInputText
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="email"
+          placeholder="Enter your email"
+          autocomplete="email"
+          class="w-full"
+        />
+
+        <small class="field-hint">
+          Please enter a valid email address.
+        </small>
+      </div>
+
+    </div>
+
+    <!-- Footer Actions -->
+    <ng-template #footer>
+      <div class="profile-actions">
+
+        <button
+          type="button"
+          pButton
+          severity="secondary"
+          variant="outlined"
+          (click)="cancelChanges()"
+        >
+          Cancel
+        </button>
+
+        <button
+          type="button"
+          pButton
+          (click)="saveChanges()"
+          class="flex items-center justify-center text-center"
+        >
+          <span pButtonLabel>Save Changes</span>
+        </button>
+
+      </div>
+    </ng-template>
+
+  </p-dialog>
+</main>

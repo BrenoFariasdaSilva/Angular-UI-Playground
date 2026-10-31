@@ -1,0 +1,99 @@
+.profile-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 55%),
+    var(--p-surface-50);
+  color: var(--p-text-color);
+}
+
+.profile-card {
+  width: min(100%, 32rem);
+  padding: clamp(2rem, 6vw, 3.5rem);
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1.25rem;
+  background: var(--p-content-background);
+  box-shadow: 0 1.5rem 4rem rgb(15 23 42 / 10%);
+  text-align: center;
+}
+
+.profile-eyebrow {
+  color: var(--p-primary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.profile-card h1 {
+  margin: 0.75rem 0 0.5rem;
+  color: var(--p-text-color);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+}
+
+.profile-card p,
+.dialog-description,
+.field-hint {
+  color: var(--p-text-muted-color);
+}
+
+.profile-card p {
+  margin: 0 0 1.75rem;
+}
+
+.profile-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-field label {
+  color: var(--p-text-color);
+  font-weight: 600;
+}
+
+.field-hint {
+  font-size: 0.8rem;
+}
+
+.profile-error {
+  margin: 0;
+  color: var(--p-red-600);
+}
+
+.profile-actions {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 30rem) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .profile-actions {
+    flex-direction: column-reverse;
+  }
+
+  .profile-actions button {
+    width: 100%;
+  }
+}
