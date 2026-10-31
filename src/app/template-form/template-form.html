@@ -1,0 +1,81 @@
+<form
+  #registrationForm="ngForm"
+  (ngSubmit)="registrationForm.valid && submitForm($event)"
+  class="flex min-h-screen flex-col items-center justify-center gap-4 px-4"
+>
+  <h1 class="text-center text-2xl font-bold">
+    Template-Driven Registration Form
+  </h1>
+
+  <p class="max-w-md text-center text-sm text-gray-600">
+    Template-Driven Forms define controls and validation mainly in HTML
+    using ngModel, while Reactive Forms manage them explicitly in TypeScript.
+  </p>
+
+  <!-- Username -->
+  <input
+    name="username"
+    type="text"
+    placeholder="Username"
+    [(ngModel)]="username"
+    required
+    minlength="3"
+    autocomplete="username"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Phone Number -->
+  <input
+    name="phone"
+    type="text"
+    inputmode="numeric"
+    pInputMask="(99) 99999-9999"
+    pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+    placeholder="Phone Number"
+    [(ngModel)]="phone"
+    required
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Birthdate -->
+  <input
+    name="birthdate"
+    type="text"
+    inputmode="numeric"
+    pInputMask="99/99/9999"
+    pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+    placeholder="Birthdate - dd/mm/yyyy"
+    [(ngModel)]="birthdate"
+    required
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Password -->
+  <input
+    name="password"
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="password"
+    required
+    minlength="8"
+    autocomplete="new-password"
+    class="w-64 rounded-md border border-gray-400 px-4 py-2"
+  />
+
+  <!-- Validation Errors -->
+  @if (registrationForm.submitted && registrationForm.invalid) {
+    <p class="max-w-xs text-center text-sm text-red-600">
+      Invalid registration information. Complete all fields
+      using the required formats. Username must have at least
+      3 characters and password at least 8 characters.
+    </p>
+  }
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="w-64 cursor-pointer rounded-md border border-gray-400 px-4 py-2 hover:bg-gray-100"
+  >
+    Register
+  </button>
+</form>
