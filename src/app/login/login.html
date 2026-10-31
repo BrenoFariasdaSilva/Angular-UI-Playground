@@ -1,0 +1,74 @@
+<!--
+  Tailwind CSS Classes:
+
+  Layout:
+  - flex: Enables Flexbox layout.
+  - min-h-screen: Sets minimum height to 100vh (full viewport height).
+  - items-center: Centers items vertically.
+  - justify-center: Centers items horizontally.
+  - flex-col: Arranges elements vertically.
+  - gap-3: Adds 12px spacing between elements.
+
+  Borders and appearance:
+  - border: Adds a 1px solid border.
+  - border-gray-300: Sets the border color to light gray.
+  - rounded-md: Adds moderately rounded corners.
+  - px-4: Adds 16px horizontal padding.
+  - py-2: Adds 8px vertical padding.
+  - focus:outline-none: Removes the default focus outline.
+  - focus:ring-2: Adds a 2px focus ring.
+  - focus:ring-blue-500: Sets the focus ring color to blue.
+  - hover:bg-blue-600: Changes background color on hover.
+-->
+
+
+<div class="flex min-h-screen items-center justify-center">
+  <form
+    (ngSubmit)="handleSubmit()"
+    class="flex flex-col gap-3 w-72"
+  >
+
+    E-mail:
+    <input
+      name="email"
+      [(ngModel)]="email"
+      #emailField="ngModel"
+      type="email"
+      email
+      required
+      placeholder="example@domain.com"
+    />
+
+    <!-- Errors handling -->
+    @if (emailField.touched && emailField.hasError('required')) {
+      <p>Email is required.</p>
+    }
+
+    @if (emailField.touched && emailField.hasError('email')) {
+      <p>Please enter a valid email address.</p>
+    }
+
+    Password:
+    <input
+      name="password"
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Password"
+      class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+
+    @if (loginError) {
+      <p class="text-red-500 text-sm">
+        {{ loginError }}
+      </p>
+    }
+
+    <button
+      type="submit"
+      class="border border-blue-500 rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+    >
+      Login
+    </button>
+
+  </form>
+</div>
