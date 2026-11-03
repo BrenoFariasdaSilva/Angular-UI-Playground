@@ -70,7 +70,29 @@ The project combines PrimeNG and Tailwind CSS to demonstrate polished UI pattern
 
 ## Requirements
 
-Bullet points of the requirements.
+Install these tools before cloning the project:
+
+| Tool | Required version | Purpose |
+| --- | --- | --- |
+| [Node.js](https://nodejs.org/) | A current LTS release compatible with Angular 22 | Runs the development tools and application build |
+| npm | `11.13.0` recommended | Installs the locked project dependencies and runs scripts |
+| Angular CLI | `22.x` optional | Provides the global `ng` command for scaffolding and diagnostics |
+
+Node.js includes npm. Verify both after installation:
+
+```bash
+node --version
+npm --version
+```
+
+To install the Angular CLI globally, run:
+
+```bash
+npm install -g @angular/cli@22
+ng version
+```
+
+The global CLI is optional: all build, test, and development commands below use the project-local CLI through npm.
 
 ## Setup
 
