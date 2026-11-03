@@ -64,7 +64,9 @@
 
 ## Introduction
 
-Detailed project description.
+Angular UI Playground is a practical sandbox for learning modern Angular through focused, working examples. It explores standalone components, routing, data binding, signals, reusable components, events, forms, pipes, and UI state.
+
+The project combines PrimeNG and Tailwind CSS to demonstrate polished UI patterns, including a globally available `p-drawer` navigation menu and independently routed PrimeNG component examples for buttons, input groups, date pickers, list boxes, sliders, tables, dialogs, messages, cards, panels, tags, and pagination.
 
 ## Requirements
 
