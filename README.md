@@ -52,9 +52,13 @@
   - [Requirements](#requirements)
   - [Setup](#setup)
     - [Clone the repository](#clone-the-repository)
-  - [Installation:](#installation)
-  - [Run Programing Language Code:](#run-programing-language-code)
-    - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Build](#build)
+  - [Tests](#tests)
+  - [Code scaffolding](#code-scaffolding)
+  - [End-to-end tests](#end-to-end-tests)
+  - [Additional resources](#additional-resources)
   - [Results - Optional](#results---optional)
   - [How to Cite?](#how-to-cite)
   - [Contributing](#contributing)
@@ -105,44 +109,69 @@ The global CLI is optional: all build, test, and development commands below use 
    cd Angular-UI-Playground
    ```
 
-## Installation:
+## Installation
 
-* Programing Language:
-
-  * Manually:
-      ```bash
-      # Programing Language:
-      sudo apt install program-language -y
-      ```
-
-  * Using Makefile:
-      ```bash
-      make install
-      ```
-
-  * Using ShellScript:
-      ```bash
-      chmod +x install.sh
-      sudo ./install.sh
-      ```  
-
-## Run Programing Language Code:
+Install every project dependency from the lockfile:
 
 ```bash
-# Command here 
+npm ci
 ```
 
-### Dependencies
+This installs the exact versions used by the project, including Angular 22, PrimeNG, the Aura theme, Tailwind CSS, TypeScript, Vitest, Prettier, and their supporting packages. You do **not** need to install PrimeNG or Tailwind CSS globally or one package at a time.
 
-1. Install the project dependencies with the following command:
+Use `npm install` only when intentionally changing dependencies, because it can update `package-lock.json`.
 
-   ```bash
-   make dependencies
-   ```
+## Development
+
+Start the local development server:
+
+```bash
+npm start
+```
+
+Open [http://localhost:4200/](http://localhost:4200/) in a browser. Angular reloads the application after source changes.
+
+## Build
+
+Create an optimized production build in `dist/`:
+
+```bash
+npm run build
+```
+
+## Tests
+
+Run the unit tests with Vitest:
+
+```bash
+npm test
+```
+
+## Code scaffolding
+
+Generate a new Angular component:
+
+```bash
+ng generate component component-name
+```
+
+See all available Angular CLI schematics with:
+
+```bash
+ng generate --help
+```
+
+## End-to-end tests
+
+An end-to-end test framework is not configured by default. Choose and configure one that fits the project when end-to-end coverage is needed.
+
+## Additional resources
+
+See the [Angular CLI overview and command reference](https://angular.dev/tools/cli) for the complete CLI documentation.
 
 ## Results - Optional
 
-Discuss the results obtained in the project.
+Use the navigation drawer to explore the learning examples and the PrimeNG component gallery.
 
 ## How to Cite?
 
