@@ -1,10 +1,17 @@
-.DS_STORE
+# Operating-system files
+.DS_Store
+Thumbs.db
 
+# Angular build output and caches
 /dist/
+/out-tsc/
+/tmp/
+/coverage/
+/.angular/
 /bazel-out
 /integration/bazel/bazel-*
 *.log
-node_modules/
+/node_modules/
 modules/ssr-benchmarks/node_modules/
 /ngp-vscode-ng-language-service/dist/
 /.vscode-test/
@@ -19,7 +26,9 @@ pubspec.lock
 !.devcontainer/recommended-devcontainer.json
 !.devcontainer/recommended-Dockerfile
 .settings/
-.vscode/settings.json
+# Keep shared VS Code recommendations, launch configurations, and tasks.
+# Local editor settings stay out of the repository.
+/.vscode/settings.json
 *.swo
 *.swp
 modules/.settings
@@ -54,9 +63,6 @@ baseline.json
 
 # Husky
 .husky/_
-
-# Ignore cache created with the Angular CLI.
-.angular/
 
 # pnpm store
 .pnpm-store
