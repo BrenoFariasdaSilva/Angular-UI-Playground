@@ -1,6 +1,6 @@
 <div align="center">
   
-# [Angular-UI-Playground.](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground) <img src="https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/blob/main/.assets/Icons/Angular.svg"  width="3%" height="3%">
+# [Angular-UI-Playground.](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground) <img src="https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/blob/main/.assets/Icons/Angular.png"  width="3%" height="3%">
 
 </div>
 
