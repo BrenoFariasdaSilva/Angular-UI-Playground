@@ -34,7 +34,6 @@
 ![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Angular-UI-Playground)
 ![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Angular-UI-Playground)
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Angular-UI-Playground)
 ![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Angular-UI-Playground.svg)
 
 </div>
