@@ -12,6 +12,7 @@
 
   @if (images.length) {
     <h3>Timed carousel</h3>
+    <p>Uses <code>p-carousel</code> with circular navigation and a 3-second autoplay interval.</p>
     <p-carousel
       [value]="images"
       [numVisible]="2"
@@ -28,6 +29,7 @@
     </p-carousel>
 
     <h3>Continuous loop</h3>
+    <p>Duplicates the image sequence and translates it horizontally with a linear CSS animation.</p>
     <div class="continuous-carousel" aria-label="Continuously looping image carousel">
       <div class="continuous-track">
         @for (image of images; track image.url) {
