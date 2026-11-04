@@ -1,3 +1,5 @@
 <!-- Root Angular template that hosts the active routed page. -->
-<app-side-nav-drawer></app-side-nav-drawer>
+@if (!isLoginRoute()) {
+  <app-side-nav-drawer></app-side-nav-drawer>
+}
 <router-outlet></router-outlet>

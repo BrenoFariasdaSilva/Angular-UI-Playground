@@ -1,6 +1,6 @@
 // TypeScript root component that displays the page selected by the router.
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { SideNavDrawer } from './side-nav-drawer/side-nav-drawer';
 
 @Component({
@@ -9,4 +9,9 @@ import { SideNavDrawer } from './side-nav-drawer/side-nav-drawer';
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {}
+export class App {
+  private readonly router = inject(Router);
+  isLoginRoute() {
+    return this.router.url === '/';
+  }
+}

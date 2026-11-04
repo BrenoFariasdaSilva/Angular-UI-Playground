@@ -1,0 +1,60 @@
+.login-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 55%), var(--p-surface-50);
+}
+.login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: min(100%, 28rem);
+  padding: clamp(2rem, 6vw, 3.5rem);
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1.25rem;
+  background: var(--p-content-background);
+  box-shadow: 0 1.5rem 4rem rgb(15 23 42 / 10%);
+}
+.login-eyebrow {
+  margin: 0;
+  color: var(--p-primary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  color: var(--p-text-color);
+}
+.login-description {
+  margin: 0 0 0.75rem;
+  color: var(--p-text-muted-color);
+}
+label {
+  font-weight: 600;
+}
+input {
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+.validation-message {
+  margin: 0;
+  border-left: 3px solid var(--p-orange-500);
+  background: var(--p-orange-50);
+  color: var(--p-orange-700);
+  padding: 0.5rem 0.75rem;
+}
+.login-submit {
+  margin-top: 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.75rem;
+}
