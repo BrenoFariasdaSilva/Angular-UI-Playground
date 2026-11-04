@@ -53,6 +53,11 @@
   - [Setup](#setup)
     - [Clone the repository](#clone-the-repository)
   - [Installation](#installation)
+  - [PrimeUI License Configuration](#primeui-license-configuration)
+    - [Obtain a License](#obtain-a-license)
+    - [Configuration](#configuration)
+    - [Troubleshooting](#troubleshooting)
+    - [Security](#security)
   - [Development](#development)
   - [Build](#build)
   - [Tests](#tests)
@@ -133,6 +138,56 @@ npm ci
 This installs the exact versions used by the project, including Angular 22, PrimeNG, the Aura theme, Tailwind CSS, TypeScript, Vitest, Prettier, and their supporting packages. You do **not** need to install PrimeNG or Tailwind CSS globally or one package at a time.
 
 Use `npm install` only when intentionally changing dependencies, because it can update `package-lock.json`.
+
+## PrimeUI License Configuration
+
+PrimeNG 22 requires a valid [PrimeUI license](https://primeui.dev/licenses/community). A **free Community License** is available to eligible individual developers, including students working on personal projects. Licenses are valid for 12 months and can be renewed for free.
+
+### Obtain a License
+
+1. Register for a [free Community License](https://primeui.store/primeui?community=1).
+2. Confirm your eligibility and complete registration.
+3. Access [My PrimeUI Licenses](https://primeui.store/user/primeui) and copy your license key.
+
+### Configuration
+
+Create a local `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+Add your license key:
+
+```dotenv
+PRIMEUI_LICENSE=YOUR_ACTUAL_LICENSE_KEY
+```
+
+Install dependencies and start the application:
+
+```bash
+npm install
+npm start
+```
+
+The `scripts/prepare-primeui-license.mjs` script automatically loads the key from `.env` and generates `src/app/primeui-license.ts`, which is used by `providePrimeNG()`. This runs automatically before `npm start`, `npm run build`, `npm run watch`, and `npm test`.
+
+For CI/CD, configure `PRIMEUI_LICENSE` as an environment variable, which takes precedence over `.env`. When using Angular CLI commands directly, run `npm run prepare:license` first.
+
+### Troubleshooting
+
+- **Missing key:** Verify `PRIMEUI_LICENSE` in `.env` and restart the application.
+- **Invalid or expired key:** Check or renew your license in [PrimeUI Store](https://primeui.store/user/primeui).
+- **License warning:** Check the browser console for `[PrimeUI]` errors.
+- **Missing generated file:** Run `npm run prepare:license`.
+
+### Security
+
+Never commit `.env` or the generated `primeui-license.ts` file. Both are excluded via `.gitignore`. The `.env.example` file contains placeholders only.
+
+**Note:** The license key may appear in compiled browser JavaScript. Each developer must obtain their own valid license; do not publicly share or redistribute your key.
+
+For details, see the [official PrimeUI setup guide](https://blog.primeui.dev/blog/setting-up-a-primeui-license-key/).
 
 ## Development
 
