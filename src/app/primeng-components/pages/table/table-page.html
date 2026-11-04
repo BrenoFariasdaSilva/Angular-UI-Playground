@@ -4,6 +4,10 @@
     Click a column heading to sort ascending or descending; <code>p-sort-icon</code> shows the
     active direction. Use a filter below each field and press Enter to narrow the results.
   </p>
+  <p>
+    Each field uses <code>p-column-filter</code>; the table's <code>filterDisplay="row"</code>
+    setting renders those filters directly beneath their columns.
+  </p>
 
   <p-table [value]="products" filterDisplay="row" [tableStyle]="{ 'min-width': '34rem' }">
     <ng-template #header>
