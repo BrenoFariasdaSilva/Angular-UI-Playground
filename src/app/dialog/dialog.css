@@ -4,8 +4,7 @@
   place-items: center;
   padding: 2rem;
   background:
-    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 55%),
-    var(--p-surface-50);
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 55%), var(--p-surface-50);
   color: var(--p-text-color);
 }
 
@@ -40,6 +39,20 @@
 
 .profile-card p {
   margin: 0 0 1.75rem;
+}
+
+.dialog-instructions {
+  margin: 0 0 1.25rem;
+  border-left: 3px solid var(--p-primary-color);
+  border-radius: 0.25rem;
+  background: var(--p-primary-50);
+  color: var(--p-text-color);
+  padding: 0.75rem 1rem;
+}
+
+.dialog-instructions p {
+  margin: 0.35rem 0 0;
+  color: var(--p-text-muted-color);
 }
 
 .profile-edit-button {
