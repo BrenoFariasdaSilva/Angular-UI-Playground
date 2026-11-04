@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthSessionService } from '../auth/auth-session.service';
 
 @Component({
   imports: [FormsModule],
@@ -9,7 +10,9 @@ import { Router } from '@angular/router';
   templateUrl: './login.html',
 })
 export class Login {
-  private router = inject(Router); // Dependency injection of the Router class.
+  private readonly authSession = inject(AuthSessionService);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
 
   email = '';
   password = '';
@@ -19,7 +22,10 @@ export class Login {
     this.loginError = '';
 
     if (this.validateLogin()) {
-      this.router.navigate(['/home']);
+      this.authSession.authorize();
+      const returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
+      const destination = returnUrl?.startsWith('/') && !returnUrl.startsWith('//') ? returnUrl : '/home';
+      this.router.navigateByUrl(destination);
     } else {
       this.loginError = 'Invalid email or password.';
     }

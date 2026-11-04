@@ -1,5 +1,6 @@
 // TypeScript route table mapping URL paths to page components.
 import { Routes } from '@angular/router';
+import { authGuard } from './auth/auth.guard';
 import { HomePage } from './home-page/home-page';
 import { Login } from './login/login';
 import { miscRoutes } from './misc/misc.routes';
@@ -13,19 +14,30 @@ import { primengComponentRoutes } from './primeng-components/primeng-components.
 
 export const routes: Routes = [
   { path: '', component: Login, pathMatch: 'full' },
-  { path: 'home', component: HomePage, pathMatch: 'full' },
-  { path: 'next-page', component: NextPage, pathMatch: 'full' },
+  { path: 'home', component: HomePage, canActivate: [authGuard], pathMatch: 'full' },
+  { path: 'next-page', component: NextPage, canActivate: [authGuard], pathMatch: 'full' },
   {
     path: 'dialog',
     loadComponent: () => import('./dialog/dialog').then((m) => m.Dialog),
+    canActivate: [authGuard],
     pathMatch: 'full',
   },
-  ...miscRoutes,
-  ...pipeRoutes,
-  { path: 'reactive-form', component: ReactiveForm, pathMatch: 'full' },
-  { path: 'template-form', component: TemplateForm, pathMatch: 'full' },
-  { path: 'tailwind-concepts', component: TailwindConcepts, pathMatch: 'full' },
-  { path: 'responsiveness', component: Responsiveness, pathMatch: 'full' },
-  ...primengComponentRoutes,
+  ...miscRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
+  ...pipeRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
+  { path: 'reactive-form', component: ReactiveForm, canActivate: [authGuard], pathMatch: 'full' },
+  { path: 'template-form', component: TemplateForm, canActivate: [authGuard], pathMatch: 'full' },
+  {
+    path: 'tailwind-concepts',
+    component: TailwindConcepts,
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
+    path: 'responsiveness',
+    component: Responsiveness,
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  ...primengComponentRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
