@@ -34,17 +34,17 @@
 .concept-table p {
   color: var(--p-text-muted-color);
 }
-@media (min-width: 640px) {
+@media (width >= theme(--breakpoint-sm)) {
   .concept-table {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 900px) {
+@media (width >= theme(--breakpoint-md)) {
   .concept-table {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1200px) {
+@media (width >= theme(--breakpoint-lg)) {
   .concept-table {
     grid-template-columns: repeat(4, 1fr);
   }
