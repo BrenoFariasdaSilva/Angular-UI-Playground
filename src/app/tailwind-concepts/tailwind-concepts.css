@@ -2,7 +2,20 @@
   display: block;
   background: var(--p-surface-50);
   min-height: 100vh;
+  color: #0f172a;
 }
 code {
   color: #047857;
+}
+h2,
+h3 {
+  color: #0f172a;
+}
+article {
+  background: #fff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+article p {
+  color: #475569;
 }
