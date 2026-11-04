@@ -16,7 +16,12 @@
         <div class="image-gallery">
           @for (file of files; track file.name; let index = $index) {
             <figure>
-              <img [src]="file.objectURL" [alt]="file.name" />
+              <p-image
+                [src]="file.objectURL"
+                [alt]="file.name"
+                [preview]="true"
+                [imageStyle]="{ aspectRatio: '1', objectFit: 'cover', width: '100%' }"
+              />
               <figcaption>{{ file.name }}</figcaption>
               <button type="button" (click)="removeFileCallback(index)">Remove</button>
             </figure>
