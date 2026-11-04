@@ -3,14 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "prepare:license": "node scripts/prepare-primeui-license.mjs",
-    "prestart": "npm run prepare:license",
     "start": "ng serve",
-    "prebuild": "npm run prepare:license",
     "build": "ng build",
-    "prewatch": "npm run prepare:license",
     "watch": "ng build --watch --configuration development",
-    "pretest": "npm run prepare:license",
     "test": "ng test"
   },
   "private": true,

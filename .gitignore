@@ -39,14 +39,6 @@ modules/.vscode
 # Don't check in secret files
 *secret.js
 
-# Local environment configuration
-.env
-.env.*
-!.env.example
-
-# Generated PrimeUI license configuration
-/src/app/primeui-license.ts
-
 # Ignore npm/yarn debug log
 npm-debug.log
 yarn-error.log

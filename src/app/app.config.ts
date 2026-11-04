@@ -4,7 +4,6 @@ import { provideRouter } from '@angular/router';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { routes } from './app.routes';
-import { PRIMEUI_LICENSE } from './primeui-license';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,7 +13,6 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Aura,
       },
-      license: PRIMEUI_LICENSE,
     }),
   ]
 };
