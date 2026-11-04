@@ -1,13 +1,25 @@
 <section>
   <h2>PrimeNG component: p-carousel</h2>
-  <p>Browse a sequence of related highlights.</p>
+  <p>Choose images to browse them as carousel slides.</p>
+  <p-fileupload
+    name="carousel-images[]"
+    mode="basic"
+    chooseLabel="Choose images"
+    accept="image/*"
+    [multiple]="true"
+    (onSelect)="addImages($event)"
+  />
 
-  <p-carousel [value]="highlights" [numVisible]="2" [numScroll]="1" [circular]="true">
-    <ng-template #item let-highlight>
-      <article class="carousel-card">
-        <h3>{{ highlight.title }}</h3>
-        <p>{{ highlight.description }}</p>
-      </article>
-    </ng-template>
-  </p-carousel>
+  @if (images.length) {
+    <p-carousel [value]="images" [numVisible]="2" [numScroll]="1" [circular]="true">
+      <ng-template #item let-image>
+        <article class="carousel-card">
+          <img [src]="image.url" [alt]="image.name" />
+          <p>{{ image.name }}</p>
+        </article>
+      </ng-template>
+    </p-carousel>
+  } @else {
+    <p class="carousel-empty">Select two or more images to begin browsing.</p>
+  }
 </section>

@@ -1,11 +1,21 @@
 .carousel-card {
-  background: var(--p-primary-50);
   border-radius: 0.75rem;
   margin: 0 0.5rem;
-  min-height: 10rem;
-  padding: 1.25rem;
+  overflow: hidden;
 }
 
-.carousel-card h3 {
-  margin-top: 0;
+.carousel-card img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-card p {
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.carousel-empty {
+  color: var(--p-text-muted-color);
 }
