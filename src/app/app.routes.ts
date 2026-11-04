@@ -4,7 +4,7 @@ import { HomePage } from './home-page/home-page';
 import { Login } from './login/login';
 import { miscRoutes } from './misc/misc.routes';
 import { NextPage } from './next-page/next-page';
-import { Pipes } from './pipes/pipes';
+import { pipeRoutes } from './pipes/pipes.routes';
 import { ReactiveForm } from './reactive-form/reactive-form';
 import { TemplateForm } from './template-form/template-form';
 import { primengComponentRoutes } from './primeng-components/primeng-components.routes';
@@ -19,7 +19,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   ...miscRoutes,
-  { path: 'pipes', component: Pipes, pathMatch: 'full' },
+  ...pipeRoutes,
   { path: 'reactive-form', component: ReactiveForm, pathMatch: 'full' },
   { path: 'template-form', component: TemplateForm, pathMatch: 'full' },
   ...primengComponentRoutes,
