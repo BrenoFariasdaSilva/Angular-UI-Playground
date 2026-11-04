@@ -48,6 +48,7 @@
 - [Angular-UI-Playground. ](#angular-ui-playground-)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
+  - [Daily learning log](#daily-learning-log)
   - [Requirements](#requirements)
   - [Setup](#setup)
     - [Clone the repository](#clone-the-repository)
@@ -70,6 +71,24 @@
 Angular UI Playground is a practical sandbox for learning modern Angular through focused, working examples. It explores standalone components, routing, data binding, signals, reusable components, events, forms, pipes, and UI state.
 
 The project combines PrimeNG and Tailwind CSS to demonstrate polished UI patterns, including a globally available `p-drawer` navigation menu and independently routed PrimeNG component examples for buttons, input groups, date pickers, list boxes, sliders, tables, dialogs, messages, cards, panels, tags, and pagination.
+
+## Daily learning log
+
+Concepts are grouped by commit day (São Paulo time) and stack. The examples show what I practiced in the project; the dates reflect when the work was committed.
+
+| # | Date | Stack | Concepts learned and practiced | Examples |
+| ---: | --- | --- | --- | --- |
+| 1 | 2026-10-29 | Angular | How an Angular workspace defines an application, its build targets, assets, styles, and local CLI commands. | [angular.json](angular.json), [package.json](package.json) |
+| 2 | 2026-10-29 | General Frontend | TypeScript compiler settings, separate app and test configurations, editor formatting, and development tasks. | [tsconfig.json](tsconfig.json), [.editorconfig](.editorconfig), [VS Code tasks](.vscode/tasks.json) |
+| 3 | 2026-10-30 | Angular | Signals and `update()` for state; interpolation, property and event binding, `ngModel` and `ngModelChange`; composing child components and using template references; built-in and custom pipes; `@Input()` and `@Output()` for component communication. | [counter](src/app/counter/), [data binding](src/app/data-binding/), [price page](src/app/next-page/), [pipes](src/app/pipes/), [notification button](src/app/notification-button-click/) |
+| 4 | 2026-10-30 | Tailwind CSS | Adding Tailwind through PostCSS and importing its utility classes into the global stylesheet. | [.postcssrc.json](.postcssrc.json), [styles.css](src/styles.css) |
+| 5 | 2026-10-31 | Angular | Template expressions, references, `@if` and `@for`; template-driven forms with `ngForm`, `ngModel`, and HTML validation; reactive forms with `FormGroup` and `FormControl`; injecting `Router` and navigating after a login check. | [template examples](src/app/misc/), [template-driven form](src/app/template-form/), [reactive form](src/app/reactive-form/), [login](src/app/login/) |
+| 6 | 2026-10-31 | PrimeNG | Input masks for formatted fields; binding a modal dialog's visibility and managing save/cancel state; drawers for navigation and a component gallery. | [form](src/app/template-form/), [dialog](src/app/dialog/), [navigation drawer](src/app/side-nav-drawer/), [gallery shell](src/app/primeng-components/primeng-components.html) |
+| 7 | 2026-10-31 | Tailwind CSS | Utility classes for full-screen and flex layouts, spacing, typography, borders, hover states, and focus states. | [home page](src/app/home-page/home-page.html), [login form](src/app/login/login.html) |
+| 8 | 2026-11-01 | PrimeNG | Choosing button emphasis; composing input groups and text fields; binding date pickers, list boxes, and sliders to form state; rendering table rows with templates; showing messages and progress. | [component examples](src/app/primeng-components/pages/) |
+| 9 | 2026-11-02 | Angular | Standalone application bootstrapping; global providers; route tables, nested child routes, redirects, `RouterLink`, and `RouterOutlet` for page navigation. | [main.ts](src/main.ts), [app routes](src/app/app.routes.ts), [gallery routes](src/app/primeng-components/primeng-components.routes.ts) |
+| 10 | 2026-11-02 | PrimeNG | Modal overlays, cards, panels, tags, and pagination; registering the Aura theme in the application configuration. | [component examples](src/app/primeng-components/pages/), [app.config.ts](src/app/app.config.ts) |
+| 11 | 2026-11-03 | Angular | Providing router dependencies in component tests and loading a route's component on demand with `loadComponent()` and a dynamic import. | [app.spec.ts](src/app/app.spec.ts), [app.routes.ts](src/app/app.routes.ts) |
 
 ## Requirements
 
