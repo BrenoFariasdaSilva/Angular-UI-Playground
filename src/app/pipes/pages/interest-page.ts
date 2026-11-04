@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { InterestPipe } from '../../interest-pipe';
+import { InterestPipe } from '../../custom-pipes/interest-pipe';
 @Component({
   imports: [CurrencyPipe, InterestPipe],
   template: `<section>
@@ -16,7 +16,8 @@ export class InterestPipe implements PipeTransform &#123;
   &#125;
 &#125;</code></pre>
     <p>
-      Import <code>InterestPipe</code> in the component, then use it in the template:
+      Import <code>InterestPipe</code> from <code>custom-pipes/interest-pipe</code> in the component,
+      then use it in the template:
       <code>100 | interest:0.025 | currency</code> →
       {{ 100 | interest: 0.025 | currency }}
     </p>

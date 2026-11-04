@@ -8,6 +8,7 @@ export class InterestPipe implements PipeTransform {
     if (typeof value === 'undefined') {
       return null;
     }
+
     return value * interestRate;
   }
 }
