@@ -41,6 +41,11 @@ export const primengComponentRoutes: Routes = [
         loadComponent: () => import('./pages/toast/toast-page').then((m) => m.ToastPage),
       },
       {
+        path: 'file-upload',
+        loadComponent: () =>
+          import('./pages/fileupload/fileupload-page').then((m) => m.FileuploadPage),
+      },
+      {
         path: 'overlay',
         loadComponent: () => import('./pages/overlay/overlay-page').then((m) => m.OverlayPage),
       },

@@ -21,6 +21,7 @@ export class PrimengComponents {
     { label: 'Table', path: 'table' },
     { label: 'Feedback', path: 'feedback' },
     { label: 'Toast', path: 'toast' },
+    { label: 'File upload', path: 'file-upload' },
     { label: 'Overlay', path: 'overlay' },
     { label: 'Layout', path: 'layout' },
     { label: 'Pagination', path: 'pagination' },
