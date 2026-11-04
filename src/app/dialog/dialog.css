@@ -46,13 +46,18 @@
   border-left: 3px solid var(--p-primary-color);
   border-radius: 0.25rem;
   background: var(--p-primary-50);
-  color: var(--p-text-color);
+  color: #14532d;
   padding: 0.75rem 1rem;
 }
 
 .dialog-instructions p {
   margin: 0.35rem 0 0;
-  color: var(--p-text-muted-color);
+  color: #334155;
+}
+
+.dialog-instructions strong,
+.dialog-instructions code {
+  color: #14532d;
 }
 
 .profile-edit-button {
