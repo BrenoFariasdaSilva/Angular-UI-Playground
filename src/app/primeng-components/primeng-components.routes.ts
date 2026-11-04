@@ -54,6 +54,11 @@ export const primengComponentRoutes: Routes = [
         loadComponent: () => import('./pages/tabs/tabs-page').then((m) => m.TabsPage),
       },
       {
+        path: 'confirm-dialog',
+        loadComponent: () =>
+          import('./pages/confirmdialog/confirmdialog-page').then((m) => m.ConfirmdialogPage),
+      },
+      {
         path: 'overlay',
         loadComponent: () => import('./pages/overlay/overlay-page').then((m) => m.OverlayPage),
       },

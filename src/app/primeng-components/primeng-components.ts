@@ -24,6 +24,7 @@ export class PrimengComponents {
     { label: 'File upload', path: 'file-upload' },
     { label: 'Stepper', path: 'stepper' },
     { label: 'Tabs', path: 'tabs' },
+    { label: 'Confirm dialog', path: 'confirm-dialog' },
     { label: 'Overlay', path: 'overlay' },
     { label: 'Layout', path: 'layout' },
     { label: 'Pagination', path: 'pagination' },
