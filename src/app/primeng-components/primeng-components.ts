@@ -23,6 +23,7 @@ export class PrimengComponents {
     { label: 'Toast', path: 'toast' },
     { label: 'File upload', path: 'file-upload' },
     { label: 'Stepper', path: 'stepper' },
+    { label: 'Tabs', path: 'tabs' },
     { label: 'Overlay', path: 'overlay' },
     { label: 'Layout', path: 'layout' },
     { label: 'Pagination', path: 'pagination' },

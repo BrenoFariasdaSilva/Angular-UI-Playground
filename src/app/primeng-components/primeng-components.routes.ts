@@ -50,6 +50,10 @@ export const primengComponentRoutes: Routes = [
         loadComponent: () => import('./pages/stepper/stepper-page').then((m) => m.StepperPage),
       },
       {
+        path: 'tabs',
+        loadComponent: () => import('./pages/tabs/tabs-page').then((m) => m.TabsPage),
+      },
+      {
         path: 'overlay',
         loadComponent: () => import('./pages/overlay/overlay-page').then((m) => m.OverlayPage),
       },
