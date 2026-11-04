@@ -11,7 +11,13 @@
   />
 
   @if (images.length) {
-    <p-carousel [value]="images" [numVisible]="2" [numScroll]="1" [circular]="true">
+    <p-carousel
+      [value]="images"
+      [numVisible]="2"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="3000"
+    >
       <ng-template #item let-image>
         <article class="carousel-card">
           <img [src]="image.url" [alt]="image.name" />
