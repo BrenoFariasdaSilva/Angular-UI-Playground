@@ -53,6 +53,11 @@
   - [Setup](#setup)
     - [Clone the repository](#clone-the-repository)
   - [Installation](#installation)
+  - [PrimeUI License Configuration](#primeui-license-configuration)
+    - [Obtain a free Community License](#obtain-a-free-community-license)
+    - [Configure locally and in CI](#configure-locally-and-in-ci)
+    - [Troubleshooting](#troubleshooting)
+    - [Security](#security)
   - [Development](#development)
   - [Build](#build)
   - [Tests](#tests)
@@ -133,6 +138,64 @@ npm ci
 This installs the exact versions used by the project, including Angular 22, PrimeNG, the Aura theme, Tailwind CSS, TypeScript, Vitest, Prettier, and their supporting packages. You do **not** need to install PrimeNG or Tailwind CSS globally or one package at a time.
 
 Use `npm install` only when intentionally changing dependencies, because it can update `package-lock.json`.
+
+## PrimeUI License Configuration
+
+PrimeNG 22 requires a valid [PrimeUI Community or Commercial license](https://primeng.dev/configuration). PrimeNG 21 and earlier remain under their original MIT license. Missing, malformed, expired, or version-incompatible keys can produce `[PrimeUI]` console warnings and an “Invalid PrimeUI License” notice.
+
+The [Community License](https://primeui.dev/licenses/community) is free for eligible individuals, including students working on their own projects. Small organizations qualify only if they meet **all** of the published criteria. Work on behalf of a university, educational institution, government body, or government-funded organization does not qualify under the organizational Community terms. Each developer working directly with PrimeUI needs a license or seat. Community licenses last 12 months and may be renewed for free after reconfirming eligibility. Community includes the core PrimeNG library; Commercial provides broader organizational eligibility and covers additional products and support under its terms.
+
+### Obtain a free Community License
+
+1. Visit [PrimeUI Community registration](https://primeui.store/primeui?community=1).
+2. Register or sign in to a PrimeUI account.
+3. Review the Community License eligibility criteria and binding terms.
+4. Confirm eligibility as an individual developer when applicable; check organizational eligibility separately for institutional work.
+5. Complete the Community License registration.
+6. Visit [your PrimeUI licenses](https://primeui.store/user/primeui).
+7. Find your active PrimeUI license.
+8. Open its details and copy the license key.
+9. Keep the key available for local project configuration.
+
+### Configure locally and in CI
+
+Copy the example file:
+
+```bash
+cp .env.example .env
+```
+
+Replace its placeholder with your own key:
+
+```dotenv
+PRIMEUI_LICENSE=YOUR_ACTUAL_LICENSE_KEY
+```
+
+Install dependencies and start the application:
+
+```bash
+npm install
+npm start
+```
+
+The `postinstall` hook creates the ignored `src/app/primeui-license.ts` so TypeScript can resolve the import after `npm install` or `npm ci`. Without a key, the file contains an empty placeholder and the hook prints a setup reminder. The strict preparation hook before `npm start`, `npm run build`, `npm run watch`, and `npm test` reads `PRIMEUI_LICENSE` from `.env`, regenerates the file, and fails with setup instructions if no key is configured. `app.config.ts` passes the generated value to `providePrimeNG({ license })`. Production builds embed the key available **at build time**. Restart the npm command after changing `.env`.
+
+For CI/CD, set `PRIMEUI_LICENSE` in the process environment; it takes precedence over `.env`. An explicitly empty process variable also takes precedence and fails. Build machines do not need separate developer seats under the [Community terms](https://primeui.dev/licenses/community). Direct `ng serve`, `ng build`, and `ng test` bypass the strict npm hooks; run `npm run prepare:license` first or use the npm commands.
+
+### Troubleshooting
+
+- **Missing or empty key:** Set `PRIMEUI_LICENSE` in `.env` or the process environment. Unset an empty process variable if `.env` should supply the key.
+- **Malformed or invalid key:** Copy the complete, unaltered key without whitespace. The script checks presence and whitespace; PrimeUI validates the key in the browser.
+- **Expired Community License:** Renew it in [PrimeUI Store](https://primeui.store/user/primeui) after reconfirming eligibility. PrimeUI documents a 30-day grace period.
+- **Version not covered:** Renew the license or use a PrimeNG release published during its update period.
+- **Browser notice:** Open developer tools and inspect the `[PrimeUI]` console message. A valid key should remove the license warning and notice; successful compilation alone does not establish activation.
+- **Missing generated module or editor import error:** Run `npm run postinstall` to create the local placeholder, then configure your key. Direct Angular CLI commands can use an empty or stale module because they bypass npm's license checks.
+
+### Security
+
+Never commit `.env` or the generated `primeui-license.ts` file. Both are excluded via `.gitignore`; `.env.example` contains placeholders only. Browser JavaScript may contain the key, so environment variables do not make it secret. Each developer must obtain their own valid license or seat. A public GitHub repository does not authorize reuse of its owner's key; do not publicly distribute your key for others to avoid their own license.
+
+For details, see the [official PrimeUI setup guide](https://blog.primeui.dev/blog/setting-up-a-primeui-license-key/).
 
 ## Development
 
