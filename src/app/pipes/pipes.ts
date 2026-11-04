@@ -15,6 +15,6 @@ export class Pipes {
     { label: 'Numbers', path: 'numbers' },
     { label: 'Text', path: 'text' },
     { label: 'Slice & JSON', path: 'data' },
-    { label: 'Interest', path: 'interest' },
+    { label: 'Custom Pipe', path: 'interest' },
   ];
 }
