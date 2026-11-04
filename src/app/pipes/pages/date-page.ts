@@ -5,7 +5,8 @@ import { DatePipe } from '@angular/common';
   template: `<section>
     <h2>DatePipe</h2>
     <p>
-      <code>&#123;&#123; today | date: 'shortDate' &#125;&#125;</code> → {{ today | date: 'shortDate' }}
+      <code>&#123;&#123; today | date: 'shortDate' &#125;&#125;</code> →
+      {{ today | date: 'shortDate' }}
     </p>
   </section>`,
 })

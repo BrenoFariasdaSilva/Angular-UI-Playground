@@ -4,9 +4,9 @@ import { LowerCasePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
   imports: [LowerCasePipe, TitleCasePipe, UpperCasePipe],
   template: `<section>
     <h2>Text pipes</h2>
-    <p>{{ text | uppercase }}</p>
-    <p>{{ text | lowercase }}</p>
-    <p>{{ text | titlecase }}</p>
+    <p><code>&#123;&#123; text | uppercase &#125;&#125;</code> → {{ text | uppercase }}</p>
+    <p><code>&#123;&#123; text | lowercase &#125;&#125;</code> → {{ text | lowercase }}</p>
+    <p><code>&#123;&#123; text | titlecase &#125;&#125;</code> → {{ text | titlecase }}</p>
   </section>`,
 })
 export class TextPage {

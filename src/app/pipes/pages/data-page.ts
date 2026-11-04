@@ -4,7 +4,8 @@ import { JsonPipe, SlicePipe } from '@angular/common';
   imports: [JsonPipe, SlicePipe],
   template: `<section>
     <h2>SlicePipe and JsonPipe</h2>
-    <p>{{ text | slice: 0 : 14 }}</p>
+    <p><code>&#123;&#123; text | slice:0:14 &#125;&#125;</code> → {{ text | slice: 0 : 14 }}</p>
+    <p><code>&#123;&#123; object | json &#125;&#125;</code></p>
     <pre>{{ object | json }}</pre>
   </section>`,
 })

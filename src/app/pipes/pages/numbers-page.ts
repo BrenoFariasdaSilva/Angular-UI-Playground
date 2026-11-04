@@ -4,9 +4,15 @@ import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
   imports: [CurrencyPipe, DecimalPipe, PercentPipe],
   template: `<section>
     <h2>Number pipes</h2>
-    <p>Currency: {{ 1234.5 | currency }}</p>
-    <p>Decimal: {{ 12345.678 | number: '1.2-2' }}</p>
-    <p>Percent: {{ 0.8235 | percent: '1.0-2' }}</p>
+    <p><code>&#123;&#123; 1234.5 | currency &#125;&#125;</code> → {{ 1234.5 | currency }}</p>
+    <p>
+      <code>&#123;&#123; 12345.678 | number: '1.2-2' &#125;&#125;</code> →
+      {{ 12345.678 | number: '1.2-2' }}
+    </p>
+    <p>
+      <code>&#123;&#123; 0.8235 | percent: '1.0-2' &#125;&#125;</code> →
+      {{ 0.8235 | percent: '1.0-2' }}
+    </p>
   </section>`,
 })
 export class NumbersPage {}

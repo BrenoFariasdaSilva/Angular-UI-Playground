@@ -5,7 +5,10 @@ import { InterestPipe } from '../../interest-pipe';
   imports: [CurrencyPipe, InterestPipe],
   template: `<section>
     <h2>Custom InterestPipe</h2>
-    <p>{{ 100 | interest: 0.025 | currency }}</p>
+    <p>
+      <code>&#123;&#123; 100 | interest:0.025 | currency &#125;&#125;</code> →
+      {{ 100 | interest: 0.025 | currency }}
+    </p>
   </section>`,
 })
 export class InterestPage {}
