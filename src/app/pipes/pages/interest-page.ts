@@ -6,7 +6,7 @@ import { InterestPipe } from '../../interest-pipe';
   template: `<section>
     <h2>Custom InterestPipe</h2>
     <p>
-      <code>&#123;&#123; 100 | interest:0.025 | currency &#125;&#125;</code> →
+      <code>100 | interest:0.025 | currency</code> →
       {{ 100 | interest: 0.025 | currency }}
     </p>
   </section>`,
