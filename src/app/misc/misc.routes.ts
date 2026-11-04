@@ -20,6 +20,10 @@ export const miscRoutes: Routes = [
         loadComponent: () => import('./pages/control-flow-page').then((m) => m.ControlFlowPage),
       },
       {
+        path: 'data-binding',
+        loadComponent: () => import('./pages/data-binding-page').then((m) => m.DataBindingPage),
+      },
+      {
         path: 'events',
         loadComponent: () => import('./pages/events-page').then((m) => m.EventsPage),
       },

@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Counter } from '../../counter/counter';
-import { DataBinding } from '../../data-binding/data-binding';
 @Component({
   selector: 'app-price-page',
-  imports: [CurrencyPipe, FormsModule, Counter, DataBinding],
+  imports: [CurrencyPipe, FormsModule, Counter],
   template: `<section>
-    <h2>Price and data binding</h2>
+    <h2>Price and currency</h2>
     <input type="number" min="0" max="100" [(ngModel)]="price" />
     <p>{{ price | currency: 'EUR' }} · {{ price * 1.12 | currency: 'USD' }}</p>
-    <app-counter /><app-data-binding />
+    <app-counter />
   </section>`,
 })
 export class PricePage {

@@ -5,10 +5,16 @@ import { NotificationButtonClick } from '../../notification-button-click/notific
   imports: [NotificationButtonClick],
   template: `<section>
     <h2>Component events</h2>
-    <app-notification-button-click text="Send notification" (buttonClicked)="message.set($event)" />
-    <p>{{ message() }}</p>
+    <p><code>(buttonClicked)="notify()"</code> listens to the child component output.</p>
+    <app-notification-button-click text="Send notification" (buttonClicked)="notify()" />
+    @if (message()) {
+      <p role="status">{{ message() }}</p>
+    }
   </section>`,
 })
 export class EventsPage {
   readonly message = signal('');
+  notify() {
+    this.message.set('Notification received from the child component.');
+  }
 }

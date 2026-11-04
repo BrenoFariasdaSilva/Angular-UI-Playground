@@ -11,8 +11,9 @@ export class Misc {
   readonly navigation = [
     { label: 'Bindings', path: 'bindings' },
     { label: 'Control flow', path: 'control-flow' },
+    { label: 'Data binding', path: 'data-binding' },
     { label: 'Events', path: 'events' },
     { label: 'Interpolation', path: 'interpolation' },
-    { label: 'Price & data', path: 'price' },
+    { label: 'Price', path: 'price' },
   ];
 }
