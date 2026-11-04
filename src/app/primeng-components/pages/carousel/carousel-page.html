@@ -11,6 +11,7 @@
   />
 
   @if (images.length) {
+    <h3>Timed carousel</h3>
     <p-carousel
       [value]="images"
       [numVisible]="2"
@@ -25,6 +26,18 @@
         </article>
       </ng-template>
     </p-carousel>
+
+    <h3>Continuous loop</h3>
+    <div class="continuous-carousel" aria-label="Continuously looping image carousel">
+      <div class="continuous-track">
+        @for (image of images; track image.url) {
+          <img [src]="image.url" [alt]="image.name" />
+        }
+        @for (image of images; track image.url) {
+          <img [src]="image.url" alt="" aria-hidden="true" />
+        }
+      </div>
+    </div>
   } @else {
     <p class="carousel-empty">Select two or more images to begin browsing.</p>
   }
