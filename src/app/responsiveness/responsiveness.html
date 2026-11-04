@@ -1,0 +1,37 @@
+<main class="responsive-page">
+  <section class="responsive-hero">
+    <p>Responsive design</p>
+    <h1>Angular concepts table</h1>
+    <p>
+      Resize the viewport: the concept table changes from one to four columns while preserving
+      readable cards.
+    </p>
+  </section>
+  <section>
+    <h2>Concept reference</h2>
+    <div class="concept-table">
+      @for (
+        item of [
+          { name: 'Components', detail: 'Reusable UI building blocks.' },
+          { name: 'Templates', detail: 'HTML enhanced with Angular syntax.' },
+          { name: 'Interpolation', detail: 'Render values with double braces.' },
+          { name: 'Property binding', detail: 'Send values into element properties.' },
+          { name: 'Event binding', detail: 'Respond to user events.' },
+          { name: 'Two-way binding', detail: 'Keep a value and input in sync.' },
+          { name: 'Signals', detail: 'Reactive state primitives.' },
+          { name: 'Control flow', detail: 'Use @if and @for in templates.' },
+          { name: 'Routing', detail: 'Map URLs to components.' },
+          { name: 'Services', detail: 'Share logic through injection.' },
+          { name: 'Pipes', detail: 'Transform values for display.' },
+          { name: 'Forms', detail: 'Collect and validate user input.' },
+        ];
+        track item.name
+      ) {
+        <article>
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.detail }}</p>
+        </article>
+      }
+    </div>
+  </section>
+</main>

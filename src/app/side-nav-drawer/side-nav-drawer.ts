@@ -20,6 +20,7 @@ export class SideNavDrawer {
     { label: 'Reactive Form', path: '/reactive-form' },
     { label: 'Template Form', path: '/template-form' },
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
+    { label: 'Responsiveness', path: '/responsiveness' },
     { label: 'PrimeNG Components', path: '/primeng-components' },
   ].sort((left, right) => {
     if (left.path === '/home') return -1;

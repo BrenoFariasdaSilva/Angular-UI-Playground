@@ -8,6 +8,7 @@ import { pipeRoutes } from './pipes/pipes.routes';
 import { ReactiveForm } from './reactive-form/reactive-form';
 import { TemplateForm } from './template-form/template-form';
 import { TailwindConcepts } from './tailwind-concepts/tailwind-concepts';
+import { Responsiveness } from './responsiveness/responsiveness';
 import { primengComponentRoutes } from './primeng-components/primeng-components.routes';
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'reactive-form', component: ReactiveForm, pathMatch: 'full' },
   { path: 'template-form', component: TemplateForm, pathMatch: 'full' },
   { path: 'tailwind-concepts', component: TailwindConcepts, pathMatch: 'full' },
+  { path: 'responsiveness', component: Responsiveness, pathMatch: 'full' },
   ...primengComponentRoutes,
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
