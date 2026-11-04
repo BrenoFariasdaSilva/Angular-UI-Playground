@@ -9,10 +9,12 @@ import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
       <code>12345.678 | number:'1.2-2'</code> →
       {{ 12345.678 | number: '1.2-2' }}
     </p>
+    <p><code>1.2-2</code> means at least 1 integer digit, and 2 to 2 fraction digits.</p>
     <p>
       <code>0.8235 | percent:'1.0-2'</code> →
       {{ 0.8235 | percent: '1.0-2' }}
     </p>
+    <p><code>1.0-2</code> means at least 1 integer digit, and 0 to 2 fraction digits.</p>
   </section>`,
 })
 export class NumbersPage {}
