@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  background: var(--p-surface-50);
+  min-height: 100vh;
+}
+code {
+  color: #047857;
+}
