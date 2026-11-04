@@ -1,34 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NotificationButtonClick } from '../notification-button-click/notification-button-click';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [CommonModule, NotificationButtonClick, RouterLink],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   selector: 'app-misc',
   styleUrl: './misc.css',
   templateUrl: './misc.html',
 })
 export class Misc {
-  protected readonly title = signal('interview-angular');
-  protected readonly new_title = 'myApp2';
-  inputType = 'text';
-
-  notify(text: string) {
-    alert(`Hello ${text}`);
-  }
-
-  firstNumber: number = 2;
-  secondNumber: number = 3;
-
-  data = [
-    { name: 'Sergio Juvencio', position: 'SmartIdealWorld - CEO' },
-    { name: 'Victor Gerardo', position: 'SmartIdealWorld - CTO' },
-    { name: 'Govin Raju', position: 'SmartIdealWorld - COO' },
-    { name: 'Breno Farias', position: 'SmartIdealWorld - Software Developer' },
+  readonly navigation = [
+    { label: 'Bindings', path: 'bindings' },
+    { label: 'Control flow', path: 'control-flow' },
+    { label: 'Events', path: 'events' },
+    { label: 'Interpolation', path: 'interpolation' },
+    { label: 'Price & data', path: 'price' },
   ];
-
-  notifyButton(value: string): void {
-    alert(value);
-  }
 }

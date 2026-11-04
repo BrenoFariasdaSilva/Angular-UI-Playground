@@ -2,8 +2,7 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './home-page/home-page';
 import { Login } from './login/login';
-import { Misc } from './misc/misc';
-import { NextPage } from './next-page/next-page';
+import { miscRoutes } from './misc/misc.routes';
 import { Pipes } from './pipes/pipes';
 import { ReactiveForm } from './reactive-form/reactive-form';
 import { TemplateForm } from './template-form/template-form';
@@ -12,9 +11,13 @@ import { primengComponentRoutes } from './primeng-components/primeng-components.
 export const routes: Routes = [
   { path: '', component: Login, pathMatch: 'full' },
   { path: 'home', component: HomePage, pathMatch: 'full' },
-  { path: 'next-page', component: NextPage, pathMatch: 'full' },
-  { path: 'dialog', loadComponent: () => import('./dialog/dialog').then((m) => m.Dialog), pathMatch: 'full' },
-  { path: 'misc', component: Misc, pathMatch: 'full' },
+  { path: 'next-page', redirectTo: 'misc/price', pathMatch: 'full' },
+  {
+    path: 'dialog',
+    loadComponent: () => import('./dialog/dialog').then((m) => m.Dialog),
+    pathMatch: 'full',
+  },
+  ...miscRoutes,
   { path: 'pipes', component: Pipes, pathMatch: 'full' },
   { path: 'reactive-form', component: ReactiveForm, pathMatch: 'full' },
   { path: 'template-form', component: TemplateForm, pathMatch: 'full' },

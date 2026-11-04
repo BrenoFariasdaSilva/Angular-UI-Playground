@@ -1,4 +1,30 @@
 :host {
   display: block;
-  padding: 5rem 1rem 1rem;
+}
+.concept-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header p {
+  color: var(--p-primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+}
+nav a {
+  border-radius: 6px;
+  color: var(--p-text-color);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+nav a.active,
+nav a:hover {
+  background: var(--p-primary-100);
+  color: var(--p-primary-700);
 }
