@@ -20,6 +20,7 @@ export class PrimengComponents {
     { label: 'Slider', path: 'slider' },
     { label: 'Table', path: 'table' },
     { label: 'Feedback', path: 'feedback' },
+    { label: 'Toast', path: 'toast' },
     { label: 'Overlay', path: 'overlay' },
     { label: 'Layout', path: 'layout' },
     { label: 'Pagination', path: 'pagination' },
