@@ -22,14 +22,11 @@
 <app-counter #priceChangeCounter></app-counter>
 
 <!-- Interpolation displays the current price, and CurrencyPipe formats it as euros. -->
-<p>Price: {{ price | currency:'EUR' }}</p>
-<p>Price: {{ price * eurUsdRatio | currency:'USD' }}</p>
+<p>Price in Portugal: {{ price | currency:'EUR' }}</p>
+<p>Price in USA: {{ price * eurUsdRatio | currency:'USD' }}</p>
+<p>Price in Brazil: {{ price * eurBrlRatio | currency:'BRL' }}</p>
 
 <br>
 
 <!-- RouterLink is an Angular directive that navigates to the root route without reloading the page. -->
 <button routerLink="/home">Go back to home page</button>
-
-<hr />
-
-Input: <app-data-binding></app-data-binding>

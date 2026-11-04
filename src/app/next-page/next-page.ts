@@ -17,8 +17,7 @@ import { DataBinding } from '../data-binding/data-binding';
     CurrencyPipe,
     FormsModule,
     RouterLink,
-    Counter,
-    DataBinding
+    Counter
 ],
   selector: 'app-next-page',
   styleUrl: './next-page.css',
@@ -28,6 +27,7 @@ export class NextPage {
   // Component state holding the current price shown in the input and currency output.
   price = 0;
   readonly eurUsdRatio = 1.12;
+  readonly eurBrlRatio = 6.00;
 
   // Keep the entered value within the allowed range; null is treated as zero.
   updatePrice(value: number | null): void {
