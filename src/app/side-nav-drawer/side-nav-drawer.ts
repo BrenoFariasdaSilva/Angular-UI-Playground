@@ -13,9 +13,9 @@ export class SideNavDrawer {
 
   readonly navigation = [
     { label: 'Home', path: '/home' },
-    { label: 'Next Page', path: '/next-page' },
+    { label: 'Price Playground', path: '/next-page' },
     { label: 'Dialog', path: '/dialog' },
-    { label: 'Misc', path: '/misc' },
+    { label: 'Angular Concepts', path: '/misc' },
     { label: 'Pipes', path: '/pipes' },
     { label: 'Reactive Form', path: '/reactive-form' },
     { label: 'Template Form', path: '/template-form' },

@@ -1,6 +1,7 @@
 <!-- Angular template for the NextPage route. -->
 <!-- Static page content rendered when the /next-page route is active. -->
-<p>Welcome to the next page!</p>
+<h1>Price Playground</h1>
+<p>Explore two-way binding, child-component events, and currency pipes.</p>
 
 <!-- The label's for attribute associates it with the input's id. -->
 <label for="price"> Type Price (0-100):</label>
@@ -22,11 +23,11 @@
 <app-counter #priceChangeCounter></app-counter>
 
 <!-- Interpolation displays the current price, and CurrencyPipe formats it as euros. -->
-<p>Price in Portugal: {{ price | currency:'EUR' }}</p>
-<p>Price in USA: {{ price * eurUsdRatio | currency:'USD' }}</p>
-<p>Price in Brazil: {{ price * eurBrlRatio | currency:'BRL' }}</p>
+<p>Price in Portugal: {{ price | currency: 'EUR' }}</p>
+<p>Price in USA: {{ price * eurUsdRatio | currency: 'USD' }}</p>
+<p>Price in Brazil: {{ price * eurBrlRatio | currency: 'BRL' }}</p>
 
-<br>
+<br />
 
 <!-- RouterLink is an Angular directive that navigates to the root route without reloading the page. -->
 <button routerLink="/home">Go back to home page</button>
