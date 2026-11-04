@@ -2,10 +2,10 @@
   <h2>PrimeNG component: p-table</h2>
   <p>
     Click a column heading to sort ascending or descending; <code>p-sort-icon</code> shows the
-    active direction. Use a filter below each field to narrow the results.
+    active direction. Use a filter below each field and press Enter to narrow the results.
   </p>
 
-  <p-table [value]="products" [tableStyle]="{ 'min-width': '34rem' }">
+  <p-table [value]="products" filterDisplay="row" [tableStyle]="{ 'min-width': '34rem' }">
     <ng-template #header>
       <tr>
         <th pSortableColumn="name">Product <p-sort-icon field="name" /></th>
@@ -13,8 +13,8 @@
         <th pSortableColumn="price">Price <p-sort-icon field="price" /></th>
       </tr>
       <tr>
-        <th><p-column-filter field="name" type="text" display="row" /></th>
-        <th><p-column-filter field="category" type="text" display="row" /></th>
+        <th><p-column-filter field="name" type="text" display="row" matchMode="contains" /></th>
+        <th><p-column-filter field="category" type="text" display="row" matchMode="contains" /></th>
         <th><p-column-filter field="price" type="numeric" display="row" /></th>
       </tr>
     </ng-template>
