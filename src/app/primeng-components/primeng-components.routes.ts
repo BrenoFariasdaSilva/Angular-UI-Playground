@@ -12,6 +12,10 @@ export const primengComponentRoutes: Routes = [
         loadComponent: () => import('./pages/buttons/buttons-page').then((m) => m.ButtonsPage),
       },
       {
+        path: 'carousel',
+        loadComponent: () => import('./pages/carousel/carousel-page').then((m) => m.CarouselPage),
+      },
+      {
         path: 'inputs',
         loadComponent: () => import('./pages/inputs/inputs-page').then((m) => m.InputsPage),
       },

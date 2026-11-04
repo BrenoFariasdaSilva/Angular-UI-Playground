@@ -14,6 +14,7 @@ export class PrimengComponents {
 
   readonly navigation = [
     { label: 'Buttons', path: 'buttons' },
+    { label: 'Carousel', path: 'carousel' },
     { label: 'Confirm dialog', path: 'confirm-dialog' },
     { label: 'Date picker', path: 'date-picker' },
     { label: 'Feedback', path: 'feedback' },

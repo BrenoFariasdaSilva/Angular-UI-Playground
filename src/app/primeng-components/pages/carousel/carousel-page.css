@@ -1,0 +1,11 @@
+.carousel-card {
+  background: var(--p-primary-50);
+  border-radius: 0.75rem;
+  margin: 0 0.5rem;
+  min-height: 10rem;
+  padding: 1.25rem;
+}
+
+.carousel-card h3 {
+  margin-top: 0;
+}
