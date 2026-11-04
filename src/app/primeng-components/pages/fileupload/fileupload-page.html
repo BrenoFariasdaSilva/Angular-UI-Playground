@@ -1,12 +1,30 @@
 <section>
   <h2>PrimeNG component: p-fileupload</h2>
-  <p>Choose image files to attach; this demo does not send them to a server.</p>
+  <p>Choose image files to preview them in a gallery; this demo does not send them to a server.</p>
   <p-fileupload
     name="demo[]"
-    mode="basic"
+    mode="advanced"
     chooseLabel="Choose images"
     accept="image/*"
     [multiple]="true"
     [maxFileSize]="1000000"
-  />
+    [showUploadButton]="false"
+    [showCancelButton]="false"
+  >
+    <ng-template #content let-files let-removeFileCallback="removeFileCallback">
+      @if (files.length) {
+        <div class="image-gallery">
+          @for (file of files; track file.name; let index = $index) {
+            <figure>
+              <img [src]="file.objectURL" [alt]="file.name" />
+              <figcaption>{{ file.name }}</figcaption>
+              <button type="button" (click)="removeFileCallback(index)">Remove</button>
+            </figure>
+          }
+        </div>
+      } @else {
+        <p class="gallery-empty">Select images to preview them here.</p>
+      }
+    </ng-template>
+  </p-fileupload>
 </section>
