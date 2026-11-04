@@ -1,0 +1,31 @@
+<section>
+  <h2>PrimeNG component: p-stepper</h2>
+  <p>Guide a user through a short, ordered workflow.</p>
+
+  <p-stepper [value]="1">
+    <p-step-list>
+      <p-step [value]="1">Account</p-step>
+      <p-step [value]="2">Profile</p-step>
+      <p-step [value]="3">Review</p-step>
+    </p-step-list>
+    <p-step-panels>
+      <p-step-panel [value]="1">
+        <ng-template #content let-activateCallback="activateCallback">
+          <p>Create your account details.</p>
+          <button pButton (click)="activateCallback(2)"><span pButtonLabel>Next</span></button>
+        </ng-template>
+      </p-step-panel>
+      <p-step-panel [value]="2">
+        <ng-template #content let-activateCallback="activateCallback">
+          <p>Complete your profile.</p>
+          <button pButton (click)="activateCallback(3)"><span pButtonLabel>Next</span></button>
+        </ng-template>
+      </p-step-panel>
+      <p-step-panel [value]="3">
+        <ng-template #content>
+          <p>Review your information before submitting.</p>
+        </ng-template>
+      </p-step-panel>
+    </p-step-panels>
+  </p-stepper>
+</section>
