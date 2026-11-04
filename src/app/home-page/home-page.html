@@ -1,5 +1,39 @@
-<!-- Angular template containing the home page's example. -->
-<h1 class="flex min-h-screen items-center justify-center">
-  Hello World
-</h1>
-
+<main class="home-page">
+  <section class="hero">
+    <p class="eyebrow">Angular learning workspace</p>
+    <h1>Angular-UI-Playground</h1>
+    <p>
+      Interactive examples for learning Angular fundamentals, forms, routing, pipes, and PrimeNG
+      components.
+    </p>
+    <div class="actions">
+      <a routerLink="/misc">Explore Angular concepts</a
+      ><a routerLink="/primeng-components">Browse PrimeNG components</a>
+    </div>
+  </section>
+  <section>
+    <h2>What you can explore</h2>
+    <div class="grid">
+      <article>
+        <h3>Angular concepts</h3>
+        <p>Interpolation, bindings, control flow, child events, and data binding.</p>
+        <a routerLink="/misc">Open concepts</a>
+      </article>
+      <article>
+        <h3>Pipes</h3>
+        <p>See pipe operations and output for dates, numbers, text, JSON, and custom logic.</p>
+        <a routerLink="/pipes">Open pipes</a>
+      </article>
+      <article>
+        <h3>Forms & feedback</h3>
+        <p>Practice template-driven and reactive forms, validation, dialogs, and navigation.</p>
+        <a routerLink="/template-form">Open forms</a>
+      </article>
+      <article>
+        <h3>PrimeNG gallery</h3>
+        <p>Experiment with themed controls, tables, uploads, carousels, overlays, and more.</p>
+        <a routerLink="/primeng-components">Open gallery</a>
+      </article>
+    </div>
+  </section>
+</main>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CommonModule],
+  imports: [RouterLink],
   selector: 'app-home-page',
+  styleUrl: './home-page.css',
   templateUrl: './home-page.html',
 })
-export class HomePage {
-}
+export class HomePage {}
