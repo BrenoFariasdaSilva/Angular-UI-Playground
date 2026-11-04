@@ -1,0 +1,12 @@
+<section>
+  <h2>PrimeNG component: p-inputgroup</h2>
+  <p>Inputs can be composed with labels and addons.</p>
+
+  <div class="stack">
+    <p-inputgroup>
+      <p-inputgroup-addon>https://</p-inputgroup-addon>
+      <input pInputText [(ngModel)]="website" aria-label="Website" />
+    </p-inputgroup>
+    <textarea pTextarea [(ngModel)]="note" rows="4" aria-label="Notes"></textarea>
+  </div>
+</section>

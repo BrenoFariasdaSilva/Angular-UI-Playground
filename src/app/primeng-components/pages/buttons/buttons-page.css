@@ -1,0 +1,9 @@
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+h2 {
+  margin-bottom: 0.25rem;
+}
