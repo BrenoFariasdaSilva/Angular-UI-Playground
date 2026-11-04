@@ -1,4 +1,3 @@
-
 <main class="profile-page">
   <section class="profile-card" aria-labelledby="profile-page-title">
     <span class="profile-eyebrow">ACCOUNT SETTINGS</span>
@@ -7,12 +6,7 @@
 
     @if (!visible) {
       <!-- Hide the trigger while the modal dialog is open. -->
-      <button
-        type="button"
-        pButton
-        (click)="openDialog()"
-        class="profile-edit-button"
-      >
+      <button type="button" pButton (click)="openDialog()" class="profile-edit-button">
         <span pButtonLabel>Edit Profile</span>
       </button>
     }
@@ -22,35 +16,28 @@
   <p-dialog
     [(visible)]="visible"
     [modal]="true"
+    [dismissableMask]="true"
     [draggable]="false"
     [resizable]="false"
     header="Edit Profile"
     styleClass="profile-dialog"
     [style]="{
       width: 'min(28rem, calc(100vw - 2rem))',
-      maxWidth: 'calc(100vw - 2rem)'
+      maxWidth: 'calc(100vw - 2rem)',
     }"
   >
-
     <!-- Description -->
-    <p class="dialog-description">
-      Update your personal information below.
-    </p>
+    <p class="dialog-description">Update your personal information below.</p>
 
     <!-- Form Fields -->
     <div class="profile-fields">
-    @if (errorMessage) {
-    <p class="profile-error" role="alert">{{ errorMessage }}</p>
-    }
+      @if (errorMessage) {
+        <p class="profile-error" role="alert">{{ errorMessage }}</p>
+      }
 
-    <!-- Name -->
-    <div class="profile-field">
-      <label
-        pLabel
-        for="name"
-      >
-          Full Name
-        </label>
+      <!-- Name -->
+      <div class="profile-field">
+        <label pLabel for="name"> Full Name </label>
 
         <input
           pInputText
@@ -66,12 +53,7 @@
 
       <!-- Email -->
       <div class="profile-field">
-        <label
-          pLabel
-          for="email"
-        >
-          Email Address
-        </label>
+        <label pLabel for="email"> Email Address </label>
 
         <input
           pInputText
@@ -84,17 +66,13 @@
           class="w-full"
         />
 
-        <small class="field-hint">
-          Please enter a valid email address.
-        </small>
+        <small class="field-hint"> Please enter a valid email address. </small>
       </div>
-
     </div>
 
     <!-- Footer Actions -->
     <ng-template #footer>
       <div class="profile-actions">
-
         <button
           type="button"
           pButton
@@ -113,9 +91,7 @@
         >
           <span pButtonLabel>Save Changes</span>
         </button>
-
       </div>
     </ng-template>
-
   </p-dialog>
 </main>
