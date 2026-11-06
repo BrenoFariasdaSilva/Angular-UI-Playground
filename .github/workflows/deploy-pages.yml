@@ -32,6 +32,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build application
         run: npm run build -- --base-href "${{ steps.pages.outputs.base_path }}/"
+        env:
+          PRIMEUI_LICENSE: ${{ secrets.PRIMEUI_LICENSE }}
       - name: Add single-page application fallback
         run: cp dist/interview-angular/browser/index.html dist/interview-angular/browser/404.html
       - name: Upload Pages artifact
