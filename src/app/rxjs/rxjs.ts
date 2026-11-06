@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
-import { of } from 'rxjs';
+import { map, of } from 'rxjs';
 
 @Component({
   imports: [AsyncPipe],
@@ -15,7 +15,11 @@ export class Rxjs {
     { id: '3', name: 'Sergio Juvencio', isActive: true},
   ];
 
-  users$ = of(this.users); // 'of' converts plain-data into a stream;
+  // $ suffix is a common naming convention for Observables in RxJS.
+  users$ = of(this.users); // Source observable: `of()` emits the local users array.
+
+  // RxJS's `pipe(map())` transforms each emitted user list into an array of names.
+  usernames$ = this.users$.pipe(map((users) => users.map((user) => user.name)));
 
   ngOnInit(): void {
     // Not a great ideia to use subscribe. It's best to use async pipe, cause this way, when the object is destroyed, you don't have hanging streams that you forgot to unsub.

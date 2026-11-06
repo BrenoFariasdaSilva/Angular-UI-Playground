@@ -1,11 +1,27 @@
 <main class="rxjs-page">
-  <h1>RxJS</h1>
-  <p>This example uses the async pipe to subscribe to an observable stream of users.</p>
+  <h1>Source observable: users</h1>
+  <p><code>users$</code> uses <code>of()</code> to turn the local users array into an observable stream.</p>
   <ul>
     @for (user of users$ | async; track user.id) {
+      <!-- Angular async pipe is a pipe that automatically subscribes/unsubscribe to an Observable or Promise directly in your HTML template and returns the latest emitted value. -->
+       <!-- Prevents memory leaks by unsubscribing automatically when the component is destroyed -->
       <li>
         <span>{{ user.name }}</span>
         <span>{{ user.isActive ? 'Active' : 'Inactive' }}</span>
+      </li>
+    }
+  </ul>
+</main>
+
+<main class="rxjs-page">
+  <h1>Derived observable: usernames</h1>
+  <p><code>usernames$</code> uses <code>pipe(map())</code> to transform <code>users$</code> into a stream of names.</p>
+  <ul>
+    @for (username of usernames$ | async; track username) {
+      <!-- Angular async pipe is a pipe that automatically subscribes/unsubscribe to an Observable or Promise directly in your HTML template and returns the latest emitted value. -->
+       <!-- Prevents memory leaks by unsubscribing automatically when the component is destroyed -->
+      <li>
+        <span>{{ username }}</span>
       </li>
     }
   </ul>
