@@ -66,7 +66,6 @@
   - [Code scaffolding](#code-scaffolding)
   - [End-to-end tests](#end-to-end-tests)
   - [Additional resources](#additional-resources)
-  - [Results - Optional](#results---optional)
   - [How to Cite?](#how-to-cite)
   - [Contributing](#contributing)
   - [Collaborators](#collaborators)
@@ -248,10 +247,6 @@ An end-to-end test framework is not configured by default. Choose and configure 
 ## Additional resources
 
 See the [Angular CLI overview and command reference](https://angular.dev/tools/cli) for the complete CLI documentation.
-
-## Results - Optional
-
-Use the navigation drawer to explore the learning examples and the PrimeNG component gallery.
 
 ## How to Cite?
 
