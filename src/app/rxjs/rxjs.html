@@ -26,3 +26,16 @@
     }
   </ul>
 </main>
+
+<main class="rxjs-page">
+  <h1>Filtered observable: active users</h1>
+  <p><code>filteredUsers$</code> uses <code>pipe(filter())</code> to emit the users array only when every user is active.</p>
+  <ul>
+    @for (user of filteredUsers$ | async; track user.id) {
+      <li>
+        <span>{{ user.name }}</span>
+        <span>{{ user.isActive ? 'Active' : 'Inactive' }}</span>
+      </li>
+    }
+  </ul>
+</main>
