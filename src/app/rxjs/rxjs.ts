@@ -14,5 +14,6 @@ export class Rxjs {
     { label: 'Filter', path: 'filter' },
     { label: 'BehaviorSubject', path: 'behavior-subject' },
     { label: 'fromEvent', path: 'from-event' },
+    { label: 'combineLatest', path: 'combine-latest' },
   ];
 }

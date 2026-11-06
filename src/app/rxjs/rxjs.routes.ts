@@ -25,6 +25,10 @@ export const rxjsRoutes: Routes = [
         path: 'from-event',
         loadComponent: () => import('./pages/from-event-page').then((m) => m.FromEventPage),
       },
+      {
+        path: 'combine-latest',
+        loadComponent: () => import('./pages/combine-latest-page').then((m) => m.CombineLatestPage),
+      },
     ],
   },
 ];

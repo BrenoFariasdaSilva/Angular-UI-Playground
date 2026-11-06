@@ -30,5 +30,6 @@ describe('Rxjs', () => {
     expect(text).toContain('Filter');
     expect(text).toContain('BehaviorSubject');
     expect(text).toContain('fromEvent');
+    expect(text).toContain('combineLatest');
   });
 });
