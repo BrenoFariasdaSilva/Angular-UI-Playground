@@ -1,52 +1,12 @@
-<main class="rxjs-page">
-  <h1>Source observable: users</h1>
-  <p><code>users$</code> uses <code>of()</code> to turn the local users array into an observable stream.</p>
-  <ul>
-    @for (user of users$ | async; track user.id) {
-      <!-- Angular async pipe is a pipe that automatically subscribes/unsubscribe to an Observable or Promise directly in your HTML template and returns the latest emitted value. -->
-       <!-- Prevents memory leaks by unsubscribing automatically when the component is destroyed -->
-      <li>
-        <span>{{ user.name }}</span>
-        <span>{{ user.isActive ? 'Active' : 'Inactive' }}</span>
-      </li>
+<main class="rxjs-shell">
+  <header>
+    <p>RxJS</p>
+    <h1>Observable playground</h1>
+  </header>
+  <nav>
+    @for (item of navigation; track item.path) {
+      <a [routerLink]="item.path" routerLinkActive="active">{{ item.label }}</a>
     }
-  </ul>
-</main>
-
-<main class="rxjs-page">
-  <h1>Derived observable: usernames</h1>
-  <p><code>usernames$</code> uses <code>pipe(map())</code> to transform <code>users$</code> into a stream of names.</p>
-  <ul>
-    @for (username of usernames$ | async; track username) {
-      <!-- Angular async pipe is a pipe that automatically subscribes/unsubscribe to an Observable or Promise directly in your HTML template and returns the latest emitted value. -->
-       <!-- Prevents memory leaks by unsubscribing automatically when the component is destroyed -->
-      <li>
-        <span>{{ username }}</span>
-      </li>
-    }
-  </ul>
-</main>
-
-<main class="rxjs-page">
-  <h1>Filtered observable: active users</h1>
-  <p><code>filteredUsers$</code> uses <code>pipe(filter())</code> to emit the users array only when every user is active.</p>
-  <ul>
-    @for (user of filteredUsers$ | async; track user.id) {
-      <li>
-        <span>{{ user.name }}</span>
-        <span>{{ user.isActive ? 'Active' : 'Inactive' }}</span>
-      </li>
-    }
-  </ul>
-</main>
-
-<main class="rxjs-page">
-  <h1>BehaviorSubject: current user</h1>
-  <p><code>BehaviorSubject</code> starts with an initial value, such as <code>null</code>, and notifies subscribers whenever it receives a new value.</p>
-  <p><code>user$</code> starts as <code>null</code> and emits John after five seconds.</p>
-  @if (user$ | async; as user) {
-    <p>{{ user.name }}</p>
-  } @else {
-    <p>Waiting for the user...</p>
-  }
+  </nav>
+  <router-outlet />
 </main>

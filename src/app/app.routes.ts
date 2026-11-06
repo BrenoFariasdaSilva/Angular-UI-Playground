@@ -11,7 +11,7 @@ import { TemplateForm } from './template-form/template-form';
 import { TailwindConcepts } from './tailwind-concepts/tailwind-concepts';
 import { Responsiveness } from './responsiveness/responsiveness';
 import { primengComponentRoutes } from './primeng-components/primeng-components.routes';
-import { Rxjs } from './rxjs/rxjs';
+import { rxjsRoutes } from './rxjs/rxjs.routes';
 
 export const routes: Routes = [
   { path: '', component: Login, pathMatch: 'full' },
@@ -26,7 +26,7 @@ export const routes: Routes = [
   ...miscRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   ...pipeRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: 'reactive-form', component: ReactiveForm, canActivate: [authGuard], pathMatch: 'full' },
-  { path: 'rxjs', component: Rxjs, canActivate: [authGuard], pathMatch: 'full' },
+  ...rxjsRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: 'template-form', component: TemplateForm, canActivate: [authGuard], pathMatch: 'full' },
   {
     path: 'tailwind-concepts',

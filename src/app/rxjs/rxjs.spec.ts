@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { Rxjs } from './rxjs';
 
 describe('Rxjs', () => {
@@ -8,6 +9,7 @@ describe('Rxjs', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Rxjs],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Rxjs);
@@ -19,13 +21,13 @@ describe('Rxjs', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders users from the observable stream', () => {
+  it('renders links to the RxJS concept pages', () => {
     fixture.detectChanges();
 
     const text = fixture.nativeElement.textContent as string;
-    expect(text).toContain('Breno Farias');
-    expect(text).toContain('Victor Gerardo');
-    expect(text).toContain('Sergio Juvencio');
-    expect(text).toContain('Active');
+    expect(text).toContain('Source');
+    expect(text).toContain('Map');
+    expect(text).toContain('Filter');
+    expect(text).toContain('BehaviorSubject');
   });
 });
