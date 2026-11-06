@@ -21,6 +21,10 @@ export const rxjsRoutes: Routes = [
         loadComponent: () =>
           import('./pages/behavior-subject-page').then((m) => m.BehaviorSubjectPage),
       },
+      {
+        path: 'from-event',
+        loadComponent: () => import('./pages/from-event-page').then((m) => m.FromEventPage),
+      },
     ],
   },
 ];

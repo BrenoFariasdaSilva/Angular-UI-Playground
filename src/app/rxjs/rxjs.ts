@@ -13,5 +13,6 @@ export class Rxjs {
     { label: 'Map', path: 'map' },
     { label: 'Filter', path: 'filter' },
     { label: 'BehaviorSubject', path: 'behavior-subject' },
+    { label: 'fromEvent', path: 'from-event' },
   ];
 }

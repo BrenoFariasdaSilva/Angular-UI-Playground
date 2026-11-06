@@ -29,5 +29,6 @@ describe('Rxjs', () => {
     expect(text).toContain('Map');
     expect(text).toContain('Filter');
     expect(text).toContain('BehaviorSubject');
+    expect(text).toContain('fromEvent');
   });
 });

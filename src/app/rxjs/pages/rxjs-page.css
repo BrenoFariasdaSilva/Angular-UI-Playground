@@ -41,3 +41,30 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+.rxjs-page button {
+  padding: 0.625rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.controls {
+  display: grid;
+  max-width: 28rem;
+  gap: 1rem;
+}
+
+.controls label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.controls input {
+  width: 100%;
+}
