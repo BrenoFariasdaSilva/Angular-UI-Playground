@@ -22,14 +22,40 @@ describe('PrimengComponents', () => {
     expect(component).toBeTruthy();
   });
 
+  it('opens the component menu from the navigation control', () => {
+    fixture.detectChanges();
+
+    const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
+    expect(button.textContent).toContain('Open component menu');
+
+    button.click();
+
+    expect(component.drawerVisible).toBe(true);
+  });
+
   it('keeps every gallery page under the parent route', () => {
     const galleryRoute = primengComponentRoutes[0];
     const paths = galleryRoute.children?.map((route) => route.path);
 
     expect(galleryRoute.path).toBe('primeng-components');
     expect(paths).toEqual([
-      '', 'buttons', 'inputs', 'date-picker', 'list-box', 'slider', 'table',
-      'feedback', 'overlay', 'layout', 'pagination',
+      '',
+      'buttons',
+      'carousel',
+      'inputs',
+      'date-picker',
+      'list-box',
+      'slider',
+      'table',
+      'feedback',
+      'toast',
+      'file-upload',
+      'stepper',
+      'tabs',
+      'confirm-dialog',
+      'overlay',
+      'layout',
+      'pagination',
     ]);
   });
 });
