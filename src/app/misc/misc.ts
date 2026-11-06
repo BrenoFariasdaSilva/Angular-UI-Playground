@@ -9,11 +9,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class Misc {
   readonly navigation = [
-    { label: 'Interpolation', path: 'interpolation' },
     { label: 'Bindings', path: 'bindings' },
     { label: 'Control flow', path: 'control-flow' },
     { label: 'Data binding', path: 'data-binding' },
     { label: 'Events', path: 'events' },
+    { label: 'Interpolation', path: 'interpolation' },
     { label: 'Price', path: 'price' },
   ];
 }

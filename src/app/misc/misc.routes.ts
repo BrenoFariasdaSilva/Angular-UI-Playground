@@ -6,7 +6,7 @@ export const miscRoutes: Routes = [
     path: 'misc',
     component: Misc,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'interpolation' },
+      { path: '', pathMatch: 'full', redirectTo: 'bindings' },
       {
         path: 'interpolation',
         loadComponent: () => import('./pages/interpolation-page').then((m) => m.InterpolationPage),
