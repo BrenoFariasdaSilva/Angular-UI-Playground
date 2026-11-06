@@ -18,4 +18,14 @@ describe('Rxjs', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('renders users from the observable stream', () => {
+    fixture.detectChanges();
+
+    const text = fixture.nativeElement.textContent as string;
+    expect(text).toContain('Breno Farias');
+    expect(text).toContain('Victor Gerardo');
+    expect(text).toContain('Sergio Juvencio');
+    expect(text).toContain('Active');
+  });
 });

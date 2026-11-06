@@ -1,0 +1,12 @@
+<main class="rxjs-page">
+  <h1>RxJS</h1>
+  <p>This example uses the async pipe to subscribe to an observable stream of users.</p>
+  <ul>
+    @for (user of users$ | async; track user.id) {
+      <li>
+        <span>{{ user.name }}</span>
+        <span>{{ user.isActive ? 'Active' : 'Inactive' }}</span>
+      </li>
+    }
+  </ul>
+</main>
