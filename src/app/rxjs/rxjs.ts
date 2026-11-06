@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
-import { filter, map, of } from 'rxjs';
+import { BehaviorSubject, filter, map, of } from 'rxjs';
 
 @Component({
   imports: [AsyncPipe],
@@ -28,7 +28,16 @@ export class Rxjs {
   ); // The condition is true, when all users are active, and therefore it shows them, otherwise if one of them aint active,
   // the condition would be false and it would show no users at all.
 
+
+  // Create a new BehaviorSubject, which initially is empty/null, but can be filled and updated/subscribed later.
+  user$ = new BehaviorSubject<{ id:string; name: string } | null>(null);
+
   ngOnInit(): void {
+    // After two seconds, `next()` replaces the initial `null` value and notifies all subscribers!
+    setTimeout(() => {
+      this.user$.next({ id: '1', name: 'John'});
+    }, 5000);
+
     // Not a great ideia to use subscribe. It's best to use async pipe, cause this way, when the object is destroyed, you don't have hanging streams that you forgot to unsub.
     // this.users$.subscribe((users) => {
     //   console.log('users', users);
