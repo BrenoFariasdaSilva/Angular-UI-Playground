@@ -23,8 +23,9 @@ describe('SideNavDrawer', () => {
 
   it('keeps Home first and alphabetizes the remaining links', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
-      'Home', 'Dialog', 'Misc', 'Next Page', 'Pipes', 'PrimeNG Components',
-      'Reactive Form', 'Template Form',
+      'Home', 'Angular Concepts', 'Dialog', 'Pipes', 'Price Playground',
+      'PrimeNG Components', 'Reactive Form', 'Responsiveness', 'RxJS', 'Tailwind Concepts',
+      'Template Form',
     ]);
   });
 

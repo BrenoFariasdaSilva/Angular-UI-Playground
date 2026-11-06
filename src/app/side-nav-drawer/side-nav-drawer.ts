@@ -18,6 +18,7 @@ export class SideNavDrawer {
     { label: 'Angular Concepts', path: '/misc' },
     { label: 'Pipes', path: '/pipes' },
     { label: 'Reactive Form', path: '/reactive-form' },
+    { label: 'RxJS', path: '/rxjs' },
     { label: 'Template Form', path: '/template-form' },
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
     { label: 'Responsiveness', path: '/responsiveness' },
