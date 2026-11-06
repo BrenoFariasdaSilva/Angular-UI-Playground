@@ -2,6 +2,8 @@
   
 # [Angular-UI-Playground.](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground) <img src="https://github.com/devicons/devicon/blob/master/icons/angular/angular-original.svg"  width="3%" height="3%">
 
+<p><strong>Live demo:</strong> <a href="https://brenofariasdasilva.github.io/Angular-UI-Playground/">brenofariasdasilva.github.io/Angular-UI-Playground</a></p>
+
 </div>
 
 <div align="center">
