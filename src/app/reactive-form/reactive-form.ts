@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputMaskModule } from 'primeng/inputmask';
 
 @Component({
@@ -10,10 +10,10 @@ import { InputMaskModule } from 'primeng/inputmask';
 })
 export class ReactiveForm {
   loginForm: FormGroup = new FormGroup({
-    username: new FormControl(''),
-    phone: new FormControl(''),
-    birthdate: new FormControl(''),
-    password: new FormControl('')
+    username: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    phone: new FormControl('', [Validators.required, Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)]),
+    birthdate: new FormControl('', [Validators.required, Validators.pattern(/^\d{2}\/\d{2}\/\d{4}$/)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
 
   submitForm() {

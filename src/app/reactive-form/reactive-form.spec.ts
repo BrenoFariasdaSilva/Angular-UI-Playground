@@ -18,4 +18,17 @@ describe('ReactiveForm', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('requires valid registration values', () => {
+    expect(component.loginForm.invalid).toBe(true);
+
+    component.loginForm.setValue({
+      username: 'Breno',
+      phone: '(11) 99999-9999',
+      birthdate: '01/01/2000',
+      password: 'password',
+    });
+
+    expect(component.loginForm.valid).toBe(true);
+  });
 });
