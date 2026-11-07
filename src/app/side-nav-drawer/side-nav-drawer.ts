@@ -23,5 +23,6 @@ export class SideNavDrawer {
     { label: 'RxJS', path: '/rxjs' },
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
     { label: 'Template Form', path: '/template-form' },
+    { label: 'Themes', path: '/themes' },
   ];
 }

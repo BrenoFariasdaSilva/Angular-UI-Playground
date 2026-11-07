@@ -40,6 +40,12 @@ export const routes: Routes = [
     canActivate: [authGuard],
     pathMatch: 'full',
   },
+  {
+    path: 'themes',
+    loadComponent: () => import('./theme-concepts/theme-concepts').then((m) => m.ThemeConcepts),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
   ...primengComponentRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

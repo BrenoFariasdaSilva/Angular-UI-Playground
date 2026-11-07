@@ -1,0 +1,59 @@
+<main class="theme-page">
+  <section class="theme-hero">
+    <p class="eyebrow">Application theming</p>
+    <h1>One theme, every page</h1>
+    <p>
+      The control in the top-right corner changes the complete application between light and dark
+      themes. It stays available while you navigate, so the choice is never more than one click away.
+    </p>
+  </section>
+
+  <section aria-labelledby="theme-flow-title">
+    <h2 id="theme-flow-title">How the theme works</h2>
+    <ol class="theme-flow">
+      <li>
+        <span>1</span>
+        <div>
+          <h3>Toggle the preference</h3>
+          <p>The root application updates its theme state when you select Light or Dark.</p>
+        </div>
+      </li>
+      <li>
+        <span>2</span>
+        <div>
+          <h3>Apply one document class</h3>
+          <p><code>app-dark</code> is applied to the document element, making the choice global.</p>
+        </div>
+      </li>
+      <li>
+        <span>3</span>
+        <div>
+          <h3>Update every surface</h3>
+          <p>PrimeNG tokens and page-specific dark styles update cards, inputs, dialogs, and backgrounds.</p>
+        </div>
+      </li>
+      <li>
+        <span>4</span>
+        <div>
+          <h3>Remember the choice</h3>
+          <p>The selected theme is saved in browser storage and restored on your next visit.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="theme-details" aria-labelledby="theme-accessibility-title">
+    <div>
+      <h2 id="theme-accessibility-title">Designed to stay visible</h2>
+      <p>
+        The fixed control uses a dark appearance in light mode and white appearance in dark mode.
+        Its accessible label also explains the next action: “Switch to dark theme” or “Switch to light theme.”
+      </p>
+    </div>
+    <div class="theme-preview" aria-hidden="true">
+      <span class="preview-sun">☀</span>
+      <span class="preview-switch"></span>
+      <span class="preview-moon">☾</span>
+    </div>
+  </section>
+</main>
