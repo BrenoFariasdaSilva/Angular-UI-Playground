@@ -13,21 +13,17 @@ export class SideNavDrawer {
 
   readonly navigation = [
     { label: 'Home', path: '/home' },
-    { label: 'Price Playground', path: '/next-page' },
-    { label: 'Dialog', path: '/dialog' },
     { label: 'Angular Concepts', path: '/misc' },
+    { label: 'Dialog', path: '/dialog' },
     { label: 'Pipes', path: '/pipes' },
-    { label: 'Reactive Form', path: '/reactive-form' },
-    { label: 'RxJS', path: '/rxjs' },
-    { label: 'Template Form', path: '/template-form' },
-    { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
-    { label: 'Responsiveness', path: '/responsiveness' },
+    { label: 'Price Playground', path: '/next-page' },
     { label: 'PrimeNG Components', path: '/primeng-components' },
-  ].sort((left, right) => {
-    if (left.path === '/home') return -1;
-    if (right.path === '/home') return 1;
-    return left.label.localeCompare(right.label);
-  });
+    { label: 'Reactive Form', path: '/reactive-form' },
+    { label: 'Responsiveness', path: '/responsiveness' },
+    { label: 'RxJS', path: '/rxjs' },
+    { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
+    { label: 'Template Form', path: '/template-form' },
+  ];
 
   openDrawer(): void {
     this.visible = true;
