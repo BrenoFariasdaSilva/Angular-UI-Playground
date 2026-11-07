@@ -204,6 +204,54 @@
   padding: 0.7rem 0.9rem;
 }
 
+html.app-dark .concept-page {
+  background: #18181b;
+  border-color: #3f3f46;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 35%);
+}
+
+html.app-dark .concept-page code {
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #6ee7b7;
+}
+
+html.app-dark .demo-panel,
+html.app-dark .interpolation-list li {
+  background: #27272a;
+  border-color: #52525b;
+}
+
+html.app-dark .demo-field > span,
+html.app-dark .demo-label {
+  color: #d4d4d8;
+}
+
+html.app-dark .concept-page input {
+  background: #18181b;
+  border-color: #71717a;
+  color: #f4f4f5;
+}
+
+html.app-dark .concept-page input::placeholder {
+  color: #a1a1aa;
+}
+
+html.app-dark .demo-result,
+html.app-dark .people-list {
+  background: #052e16;
+  color: #dcfce7;
+}
+
+html.app-dark .people-list li + li {
+  border-color: #3f3f46;
+}
+
+html.app-dark .counter-card {
+  background: #18181b;
+  border-color: #52525b;
+}
+
 @media (max-width: 640px) {
   .concept-shell {
     padding: 1.5rem 1rem 3rem;

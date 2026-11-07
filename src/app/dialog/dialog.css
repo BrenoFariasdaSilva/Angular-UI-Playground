@@ -102,6 +102,27 @@
   padding-top: 1rem;
 }
 
+:host-context(.app-dark) .profile-page {
+  background: radial-gradient(ellipse at top left, #064e3b, transparent 55%), #18181b;
+}
+
+:host-context(.app-dark) .profile-card {
+  background: #27272a;
+  border-color: #52525b;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 35%);
+}
+
+:host-context(.app-dark) .dialog-instructions {
+  background: #052e16;
+  color: #dcfce7;
+}
+
+:host-context(.app-dark) .dialog-instructions p,
+:host-context(.app-dark) .dialog-instructions strong,
+:host-context(.app-dark) .dialog-instructions code {
+  color: #dcfce7;
+}
+
 @media (max-width: 30rem) {
   .profile-page {
     padding: 1rem;

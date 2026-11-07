@@ -19,3 +19,33 @@ article {
 article p {
   color: #475569;
 }
+
+:host-context(.app-dark) {
+  background: #18181b;
+  color: #f8fafc;
+}
+
+:host-context(.app-dark) main > section:first-child {
+  background-image: linear-gradient(135deg, #064e3b, #18181b 50%, #134e4a);
+}
+
+:host-context(.app-dark) .text-slate-950,
+:host-context(.app-dark) h2,
+:host-context(.app-dark) h3,
+:host-context(.app-dark) article {
+  color: #f8fafc;
+}
+
+:host-context(.app-dark) .text-slate-600,
+:host-context(.app-dark) article p {
+  color: #cbd5e1;
+}
+
+:host-context(.app-dark) article {
+  background: #27272a;
+  border-color: #52525b;
+}
+
+:host-context(.app-dark) code {
+  color: #6ee7b7;
+}

@@ -23,3 +23,15 @@ app-root {
   display: block;
   min-height: 100vh;
 }
+
+html:not(.app-dark) .theme-toggle {
+  background: #ffffff;
+  border-color: #475569;
+  color: #0f172a;
+}
+
+html.app-dark .theme-toggle {
+  background: #ffffff;
+  border-color: #e4e4e7;
+  color: #18181b;
+}
