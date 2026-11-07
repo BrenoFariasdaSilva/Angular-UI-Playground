@@ -15,9 +15,7 @@ export class TemplateForm {
   password: string = '';
 
 
-  submitForm(event: Event) {
-    event.preventDefault();
-
+  submitForm() {
     console.log('Form submitted'); // Verify in inspect console
     console.log(this.username, this.password);
   }

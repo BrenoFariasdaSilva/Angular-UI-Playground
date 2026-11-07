@@ -16,9 +16,7 @@ export class ReactiveForm {
     password: new FormControl('')
   });
 
-  submitForm(event: Event) {
-    event.preventDefault();
-
+  submitForm() {
     console.log('Form submitted'); // Verify in inspect console
     console.log(this.loginForm.value);
     console.log(this.loginForm);
