@@ -3,12 +3,12 @@ import { NotificationButtonClick } from '../../notification-button-click/notific
 @Component({
   selector: 'app-events-page',
   imports: [NotificationButtonClick],
-  template: `<section>
+  template: `<section class="concept-page">
     <h2>Component events</h2>
     <p><code>(buttonClicked)="notify()"</code> listens to the child component output.</p>
     <app-notification-button-click text="Send notification" (buttonClicked)="notify()" />
     @if (message()) {
-      <p role="status">{{ message() }}</p>
+      <p class="demo-result" role="status">{{ message() }}</p>
     }
   </section>`,
 })

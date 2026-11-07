@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-bindings-page',
-  template: `<section>
+  template: `<section class="concept-page">
     <h2>Property and event bindings</h2>
     <p>
       <code>[type]="inputType"</code> is property binding: Angular assigns the component's
@@ -15,13 +15,15 @@ import { Component } from '@angular/core';
       <code>#name</code> creates a template reference, so the click expression can read the input's
       current value.
     </p>
-    <input #name [type]="inputType" placeholder="Enter your name" /><button
-      (click)="greeting = name.value"
-    >
-      Greet
-    </button>
+    <div class="demo-panel">
+      <label class="demo-field">
+        <span>Name input</span>
+        <input #name [type]="inputType" placeholder="Enter your name" />
+      </label>
+      <button class="demo-button" type="button" (click)="greeting = name.value">Greet</button>
+    </div>
     @if (greeting) {
-      <p role="status">Greeting: {{ greeting }}</p>
+      <p class="demo-result" role="status">Greeting: {{ greeting }}</p>
     }
   </section>`,
 })

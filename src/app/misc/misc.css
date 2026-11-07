@@ -1,30 +1,233 @@
 :host {
   display: block;
 }
+
 .concept-shell {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem 4rem;
 }
-header p {
+
+.concept-shell > header p {
+  margin: 0;
   color: var(--p-primary-color);
   font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-nav {
+
+.concept-shell > header h1 {
+  margin: 0.35rem 0 0;
+}
+
+.concept-shell > nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 2rem;
+  gap: 0.6rem;
+  margin: 2rem 0;
 }
-nav a {
-  border-radius: 6px;
+
+.concept-shell > nav a {
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.6rem;
   color: var(--p-text-color);
-  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
   text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
 }
-nav a.active,
-nav a:hover {
+
+.concept-shell > nav a.active,
+.concept-shell > nav a:hover {
   background: var(--p-primary-100);
+  border-color: var(--p-primary-color);
   color: var(--p-primary-700);
+}
+
+.concept-page {
+  background: var(--p-surface-card);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem color-mix(in srgb, var(--p-text-color) 8%, transparent);
+  padding: 1.5rem;
+}
+
+.concept-page h2 {
+  margin: 0 0 0.75rem;
+}
+
+.concept-page > p {
+  line-height: 1.6;
+  max-width: 72ch;
+}
+
+.concept-page code {
+  background: var(--p-surface-100);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.35rem;
+  color: var(--p-primary-color);
+  font-size: 0.9em;
+  padding: 0.1rem 0.35rem;
+}
+
+.demo-panel {
+  align-items: end;
+  background: var(--p-surface-50);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.demo-field {
+  display: grid;
+  gap: 0.4rem;
+  min-width: min(100%, 16rem);
+}
+
+.demo-field > span,
+.demo-label {
+  color: var(--p-text-muted-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.concept-page input {
+  background: var(--p-surface-card);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.5rem;
+  color: var(--p-text-color);
+  font: inherit;
+  padding: 0.7rem 0.8rem;
+}
+
+.concept-page input:focus {
+  border-color: var(--p-primary-color);
+  box-shadow: 0 0 0 0.2rem var(--p-primary-100);
+  outline: none;
+}
+
+.demo-button {
+  background: var(--p-primary-color);
+  border: 1px solid var(--p-primary-color);
+  border-radius: 0.5rem;
+  color: var(--p-primary-contrast-color);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.demo-button:hover {
+  filter: brightness(1.08);
+}
+
+.demo-button:focus-visible {
+  outline: 0.2rem solid var(--p-primary-200);
+  outline-offset: 0.15rem;
+}
+
+.demo-button:active {
+  transform: translateY(1px);
+}
+
+.demo-toggle[aria-pressed='true'] {
+  background: var(--p-primary-100);
+  border-color: var(--p-primary-color);
+  color: var(--p-primary-700);
+}
+
+.demo-result,
+.people-list {
+  background: var(--p-primary-50);
+  border-left: 0.25rem solid var(--p-primary-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1rem 0 0;
+  padding: 0.8rem 1rem;
+}
+
+.people-list {
+  list-style: none;
+}
+
+.people-list li + li {
+  border-top: 1px solid var(--p-surface-border);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.binding-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.binding-grid .demo-field {
+  min-width: 0;
+}
+
+.interpolation-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.interpolation-list li {
+  align-items: center;
+  background: var(--p-surface-50);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.6rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.interpolation-value {
+  color: var(--p-primary-color);
+  font-weight: 700;
+}
+
+.counter-card {
+  background: var(--p-surface-card);
+  border: 1px solid var(--p-surface-border);
+  border-radius: 0.6rem;
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .concept-shell {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .concept-shell > nav {
+    margin: 1.5rem 0;
+  }
+
+  .concept-shell > nav a {
+    flex: 1 1 9rem;
+    text-align: center;
+  }
+
+  .concept-page {
+    padding: 1.1rem;
+  }
+
+  .binding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interpolation-list li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   imports: [RouterLink, RouterLinkActive, RouterOutlet],
   selector: 'app-misc',
   styleUrl: './misc.css',
