@@ -19,14 +19,14 @@ import { LabelModule } from 'primeng/label';
   templateUrl: './dialog.html',
 })
 export class Dialog {
-  visible: boolean = false;
+  visible = false;
 
-  name: string = 'Breno Farias';
-  email: string = 'breno@example.com';
-  errorMessage: string = '';
+  name = 'Breno Farias';
+  email = 'breno@example.com';
+  errorMessage = '';
 
-  private savedName: string = this.name;
-  private savedEmail: string = this.email;
+  private savedName = this.name;
+  private savedEmail = this.email;
 
   openDialog(): void {
     this.name = this.savedName;

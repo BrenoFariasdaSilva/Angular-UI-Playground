@@ -9,10 +9,10 @@ import { InputMaskModule } from 'primeng/inputmask';
   templateUrl: './template-form.html',
 })
 export class TemplateForm {
-  username: string = '';
-  phone: string = '';
-  birthdate: string = '';
-  password: string = '';
+  username = '';
+  phone = '';
+  birthdate = '';
+  password = '';
 
 
   submitForm() {
