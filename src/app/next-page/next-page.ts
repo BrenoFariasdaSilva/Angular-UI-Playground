@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 // RouterLink lets the template navigate back to the root route.
 import { RouterLink } from '@angular/router';
 import { Counter } from '../counter/counter';
-import { DataBinding } from '../data-binding/data-binding';
 
 // Standalone component metadata declares the template, styles, and template dependencies.
 @Component({
