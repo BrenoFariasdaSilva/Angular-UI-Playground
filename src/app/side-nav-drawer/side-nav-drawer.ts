@@ -24,12 +24,4 @@ export class SideNavDrawer {
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
     { label: 'Template Form', path: '/template-form' },
   ];
-
-  openDrawer(): void {
-    this.visible = true;
-  }
-
-  closeDrawer(): void {
-    this.visible = false;
-  }
 }
