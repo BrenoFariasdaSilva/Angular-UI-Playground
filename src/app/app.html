@@ -1,4 +1,14 @@
 <!-- Root Angular template that hosts the active routed page. -->
+<button
+  class="theme-toggle"
+  type="button"
+  [attr.aria-label]="isDarkTheme() ? 'Switch to light theme' : 'Switch to dark theme'"
+  [attr.aria-pressed]="isDarkTheme()"
+  (click)="toggleTheme()"
+>
+  <span aria-hidden="true">{{ isDarkTheme() ? '☀' : '☾' }}</span>
+  <span>{{ isDarkTheme() ? 'Light' : 'Dark' }}</span>
+</button>
 @if (!isLoginRoute()) {
   <app-side-nav-drawer></app-side-nav-drawer>
 }
