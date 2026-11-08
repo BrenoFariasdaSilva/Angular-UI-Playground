@@ -5,7 +5,6 @@ import { InputMaskModule } from 'primeng/inputmask';
 @Component({
   imports: [ReactiveFormsModule, InputMaskModule],
   selector: 'app-reactive-form',
-  styleUrl: './reactive-form.css',
   templateUrl: './reactive-form.html',
 })
 export class ReactiveForm {

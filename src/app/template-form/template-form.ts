@@ -5,7 +5,6 @@ import { InputMaskModule } from 'primeng/inputmask';
 @Component({
   imports: [FormsModule, InputMaskModule],
   selector: 'app-template-form',
-  styleUrl: './template-form.css',
   templateUrl: './template-form.html',
 })
 export class TemplateForm {

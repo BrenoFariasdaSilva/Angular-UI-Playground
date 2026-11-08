@@ -2,7 +2,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-notification-button-click',
   styleUrl: './notification-button-click.css',
   templateUrl: './notification-button-click.html',
