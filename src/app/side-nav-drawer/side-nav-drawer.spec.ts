@@ -25,7 +25,7 @@ describe('SideNavDrawer', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
       'Home', 'Angular Concepts', 'Dialog', 'Pipes', 'Price Playground',
       'PrimeNG Components', 'Reactive Form', 'Responsiveness', 'RxJS', 'Tailwind Concepts',
-      'Template Form', 'Themes',
+      'Template Form', 'Themes', 'Validators',
     ]);
   });
 

@@ -46,6 +46,13 @@ export const routes: Routes = [
     canActivate: [authGuard],
     pathMatch: 'full',
   },
+  {
+    path: 'validators',
+    loadComponent: () =>
+      import('./validators-concepts/validators-concepts').then((m) => m.ValidatorsConcepts),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
   ...primengComponentRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

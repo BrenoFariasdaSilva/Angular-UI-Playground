@@ -1,0 +1,89 @@
+<main class="validators-page">
+  <section class="validators-hero">
+    <p class="eyebrow">Reactive forms</p>
+    <h1>Angular Validators</h1>
+    <p>
+      Validators turn user input into reliable form data. This page combines Angular’s built-in
+      validators with one small form-level rule you can test as you type.
+    </p>
+  </section>
+
+  <section aria-labelledby="validator-catalog-title">
+    <h2 id="validator-catalog-title">Built-in validator catalog</h2>
+    <div class="validator-grid">
+      <article><code>required</code><p>Rejects an empty value.</p></article>
+      <article><code>requiredTrue</code><p>Requires a checkbox to be checked.</p></article>
+      <article><code>email</code><p>Checks the standard email shape.</p></article>
+      <article><code>minLength</code><p>Sets a minimum text length.</p></article>
+      <article><code>maxLength</code><p>Sets a maximum text length.</p></article>
+      <article><code>pattern</code><p>Matches a value against a regular expression.</p></article>
+      <article><code>min</code><p>Sets a minimum numeric value.</p></article>
+      <article><code>max</code><p>Sets a maximum numeric value.</p></article>
+    </div>
+  </section>
+
+  <section class="validator-workbench" aria-labelledby="workbench-title">
+    <div>
+      <h2 id="workbench-title">Try the validators</h2>
+      <p>Fields show an error after you interact with them. Submit the form to validate everything at once.</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="form-grid">
+        <label>
+          <span>Display name</span>
+          <input formControlName="displayName" autocomplete="name" placeholder="3–24 characters" />
+          @if (hasError('displayName', 'required')) { <small>Display name is required.</small> }
+          @if (hasError('displayName', 'minlength')) { <small>Use at least 3 characters.</small> }
+          @if (hasError('displayName', 'maxlength')) { <small>Use no more than 24 characters.</small> }
+        </label>
+
+        <label>
+          <span>Email address</span>
+          <input formControlName="email" type="email" autocomplete="email" placeholder="name@example.com" />
+          @if (hasError('email', 'required')) { <small>Email is required.</small> }
+          @if (hasError('email', 'email')) { <small>Enter a valid email address.</small> }
+        </label>
+
+        <label>
+          <span>Username</span>
+          <input formControlName="username" autocomplete="username" placeholder="Letters, numbers, and _" />
+          @if (hasError('username', 'required')) { <small>Username is required.</small> }
+          @if (hasError('username', 'pattern')) { <small>Start with a letter; use 3–16 letters, numbers, or _.</small> }
+        </label>
+
+        <label>
+          <span>Age</span>
+          <input formControlName="age" type="number" min="18" max="120" placeholder="18–120" />
+          @if (hasError('age', 'required')) { <small>Age is required.</small> }
+          @if (hasError('age', 'min') || hasError('age', 'max')) { <small>Enter an age between 18 and 120.</small> }
+        </label>
+
+        <label>
+          <span>Password</span>
+          <input formControlName="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" />
+          @if (hasError('password', 'required')) { <small>Password is required.</small> }
+          @if (hasError('password', 'minlength')) { <small>Use at least 8 characters.</small> }
+        </label>
+
+        <label>
+          <span>Confirm password</span>
+          <input formControlName="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password" />
+          @if (hasError('confirmPassword', 'required')) { <small>Confirm your password.</small> }
+          @if (form.hasError('passwordMismatch') && (form.dirty || form.touched)) { <small>Passwords must match.</small> }
+        </label>
+      </div>
+
+      <label class="checkbox-field">
+        <input formControlName="acceptTerms" type="checkbox" />
+        <span>I accept the example terms.</span>
+      </label>
+      @if (hasError('acceptTerms', 'required')) { <small class="checkbox-error">You must accept the terms.</small> }
+
+      <div class="form-actions">
+        <button type="submit">Validate form</button>
+        @if (submitted()) { <p role="status">All validators passed.</p> }
+      </div>
+    </form>
+  </section>
+</main>

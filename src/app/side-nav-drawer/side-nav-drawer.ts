@@ -24,5 +24,6 @@ export class SideNavDrawer {
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
     { label: 'Template Form', path: '/template-form' },
     { label: 'Themes', path: '/themes' },
+    { label: 'Validators', path: '/validators' },
   ];
 }
