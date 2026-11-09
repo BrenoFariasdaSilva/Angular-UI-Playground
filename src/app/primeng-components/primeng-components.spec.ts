@@ -43,6 +43,7 @@ describe('PrimengComponents', () => {
       'buttons',
       'carousel',
       'inputs',
+      'infinite-scroll',
       'date-picker',
       'list-box',
       'slider',

@@ -1,0 +1,21 @@
+<section>
+  <h2>PrimeNG component: p-scroller</h2>
+  <p>Scroll through lessons; PrimeNG requests and renders only the visible rows.</p>
+
+  <p-scroller
+    [items]="lessons"
+    [itemSize]="64"
+    scrollHeight="320px"
+    [lazy]="true"
+    (onLazyLoad)="loadLessons($event)"
+  >
+    <ng-template #item let-lesson>
+      @if (lesson) {
+        <article class="lesson">
+          <h3>{{ lesson.title }}</h3>
+          <p>{{ lesson.description }}</p>
+        </article>
+      }
+    </ng-template>
+  </p-scroller>
+</section>

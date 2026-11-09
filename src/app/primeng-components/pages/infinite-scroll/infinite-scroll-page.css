@@ -1,0 +1,14 @@
+.lesson {
+  border-bottom: 1px solid var(--p-content-border-color);
+  padding: 0.75rem 1rem;
+}
+
+.lesson h3,
+.lesson p {
+  margin: 0;
+}
+
+.lesson p {
+  color: var(--p-text-muted-color);
+  margin-top: 0.25rem;
+}

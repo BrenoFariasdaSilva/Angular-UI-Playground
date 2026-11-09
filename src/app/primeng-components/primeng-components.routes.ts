@@ -20,6 +20,11 @@ export const primengComponentRoutes: Routes = [
         loadComponent: () => import('./pages/inputs/inputs-page').then((m) => m.InputsPage),
       },
       {
+        path: 'infinite-scroll',
+        loadComponent: () =>
+          import('./pages/infinite-scroll/infinite-scroll-page').then((m) => m.InfiniteScrollPage),
+      },
+      {
         path: 'date-picker',
         loadComponent: () =>
           import('./pages/datepicker/datepicker-page').then((m) => m.DatepickerPage),

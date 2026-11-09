@@ -15,6 +15,7 @@ export class SideNavDrawer {
     { label: 'Home', path: '/home' },
     { label: 'Angular Concepts', path: '/misc' },
     { label: 'Dialog', path: '/dialog' },
+    { label: 'Infinite Scroll', path: '/primeng-components/infinite-scroll' },
     { label: 'Pipes', path: '/pipes' },
     { label: 'Price Playground', path: '/next-page' },
     { label: 'PrimeNG Components', path: '/primeng-components' },

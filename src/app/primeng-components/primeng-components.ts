@@ -19,6 +19,7 @@ export class PrimengComponents {
     { label: 'Date picker', path: 'date-picker' },
     { label: 'Feedback', path: 'feedback' },
     { label: 'File upload', path: 'file-upload' },
+    { label: 'Infinite scroll', path: 'infinite-scroll' },
     { label: 'Inputs & groups', path: 'inputs' },
     { label: 'Layout', path: 'layout' },
     { label: 'List box', path: 'list-box' },
