@@ -23,7 +23,7 @@ describe('SideNavDrawer', () => {
 
   it('keeps Home first and alphabetizes the remaining links', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
-      'Home', 'Angular Concepts', 'Dialog', 'Infinite Scroll', 'Pipes', 'Price Playground',
+      'Home', 'Angular Concepts', 'Dialog', 'Infinite Scroll', 'Pagination', 'Pipes', 'Price Playground',
       'PrimeNG Components', 'Reactive Form', 'Responsiveness', 'RxJS', 'Tailwind Concepts',
       'Template Form', 'Themes', 'Validators',
     ]);

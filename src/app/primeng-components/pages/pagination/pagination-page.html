@@ -1,5 +1,20 @@
 <section>
   <h2>PrimeNG component: p-paginator</h2>
-  <p>Navigate a result set.</p>
-  <p-paginator [rows]="10" [totalRecords]="120"></p-paginator>
+  <p>Navigate a lesson list four items at a time.</p>
+
+  <ol class="lesson-list" [start]="first + 1">
+    @for (lesson of visibleLessons; track lesson) {
+      <li>{{ lesson }}</li>
+    }
+  </ol>
+
+  <p-paginator
+    [first]="first"
+    [rows]="rows"
+    [totalRecords]="lessons.length"
+    [rowsPerPageOptions]="[4, 8, 12]"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} lessons"
+    (onPageChange)="changePage($event)"
+  />
 </section>
