@@ -23,9 +23,22 @@ describe('SideNavDrawer', () => {
 
   it('keeps Home first and alphabetizes the remaining links', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
-      'Home', 'Angular Concepts', 'Dialog', 'Infinite Scroll', 'Pagination', 'Pipes', 'Price Playground',
-      'PrimeNG Components', 'Reactive Form', 'Responsiveness', 'RxJS', 'Tailwind Concepts',
-      'Template Form', 'Themes', 'Validators',
+      'Home',
+      'Angular Concepts',
+      'Dialog',
+      'Infinite Scroll',
+      'Pagination',
+      'Pipes',
+      'Price Playground',
+      'PrimeNG Components',
+      'Reactive Form',
+      'Remote Data Explorer',
+      'Responsiveness',
+      'RxJS',
+      'Tailwind Concepts',
+      'Template Form',
+      'Themes',
+      'Validators',
     ]);
   });
 
@@ -37,7 +50,9 @@ describe('SideNavDrawer', () => {
     trigger.click();
     expect(component.visible).toBe(true);
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('button[aria-label="Open navigation"]')).not.toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('button[aria-label="Open navigation"]'),
+    ).not.toBeNull();
 
     // The drawer's close control resets its visibility state.
     const closeButton = fixture.nativeElement.querySelector(
@@ -50,5 +65,4 @@ describe('SideNavDrawer', () => {
     trigger.click();
     expect(component.visible).toBe(true);
   });
-
 });

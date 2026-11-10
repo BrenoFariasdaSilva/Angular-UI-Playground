@@ -21,6 +21,7 @@ export class SideNavDrawer {
     { label: 'Price Playground', path: '/next-page' },
     { label: 'PrimeNG Components', path: '/primeng-components' },
     { label: 'Reactive Form', path: '/reactive-form' },
+    { label: 'Remote Data Explorer', path: '/remote-data' },
     { label: 'Responsiveness', path: '/responsiveness' },
     { label: 'RxJS', path: '/rxjs' },
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
