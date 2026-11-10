@@ -53,6 +53,13 @@ export const routes: Routes = [
     canActivate: [authGuard],
     pathMatch: 'full',
   },
+  {
+    path: 'remote-data',
+    loadComponent: () =>
+      import('./remote-data-explorer/remote-data-explorer').then((m) => m.RemoteDataExplorer),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
   ...primengComponentRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

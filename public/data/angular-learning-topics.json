@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Component communication",
+    "category": "Components",
+    "description": "Pass data into a child and raise events back to its parent."
+  },
+  {
+    "id": 2,
+    "title": "Reactive forms",
+    "category": "Forms",
+    "description": "Build typed form models and show validation feedback."
+  },
+  {
+    "id": 3,
+    "title": "Route guards",
+    "category": "Routing",
+    "description": "Control navigation with an injected functional guard."
+  },
+  {
+    "id": 4,
+    "title": "Signals",
+    "category": "State",
+    "description": "Represent local reactive state with a small, synchronous API."
+  },
+  {
+    "id": 5,
+    "title": "RxJS streams",
+    "category": "RxJS",
+    "description": "Transform, filter, and combine asynchronous values."
+  },
+  {
+    "id": 6,
+    "title": "Lazy loading",
+    "category": "Performance",
+    "description": "Load a route component only when its route is visited."
+  }
+]

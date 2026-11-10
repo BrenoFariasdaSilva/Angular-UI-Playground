@@ -1,0 +1,51 @@
+<main class="remote-data-page">
+  <section class="remote-data-hero">
+    <p class="eyebrow">HTTP client</p>
+    <h1>Remote Data Explorer</h1>
+    <p>
+      This page fetches a static JSON file through Angular's <code>HttpClient</code>. Static hosting
+      is enough to practice a typed request, loading and error states, and filtering received data.
+    </p>
+  </section>
+
+  <section class="remote-data-workbench" aria-labelledby="topics-title">
+    <div class="workbench-header">
+      <div>
+        <h2 id="topics-title">Learning topics</h2>
+        <p>Search the data returned by the local HTTP request.</p>
+      </div>
+      <button type="button" (click)="loadTopics()">Refresh data</button>
+    </div>
+
+    <label class="search-field">
+      <span>Search topics</span>
+      <input
+        [ngModel]="search()"
+        (ngModelChange)="search.set($event)"
+        type="search"
+        placeholder="Try forms, routing, or signals"
+      />
+    </label>
+
+    @if (loading()) {
+      <p class="status" role="status">Loading topics…</p>
+    } @else if (error()) {
+      <div class="status error" role="alert">
+        <p>Topics could not be loaded.</p>
+        <button type="button" (click)="loadTopics()">Try again</button>
+      </div>
+    } @else if (filteredTopics().length === 0) {
+      <p class="status" role="status">No topics match your search.</p>
+    } @else {
+      <div class="topic-grid">
+        @for (topic of filteredTopics(); track topic.id) {
+          <article>
+            <p class="topic-category">{{ topic.category }}</p>
+            <h3>{{ topic.title }}</h3>
+            <p>{{ topic.description }}</p>
+          </article>
+        }
+      </div>
+    }
+  </section>
+</main>
