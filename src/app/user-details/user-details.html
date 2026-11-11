@@ -1,0 +1,33 @@
+<main class="user-details-page">
+  <section class="user-details-hero">
+    <p class="eyebrow">Angular router</p>
+    <h1>Route-driven User Details</h1>
+    <p>
+      The <code>id</code> in <code>/users/:id</code> selects a profile before this component is
+      activated. Angular then binds both the route parameter and resolved profile to signal inputs.
+    </p>
+  </section>
+
+  <section class="profile-card" aria-labelledby="profile-name">
+    <p class="route-label">Current route: /users/{{ id() }}</p>
+    <h2 id="profile-name">{{ user().name }}</h2>
+    <p class="profile-role">{{ user().role }}</p>
+    <p>{{ user().bio }}</p>
+    <p><strong>Location:</strong> {{ user().location }}</p>
+  </section>
+
+  <section aria-labelledby="profiles-title">
+    <h2 id="profiles-title">Choose another profile</h2>
+    <div class="profile-grid">
+      @for (profile of users; track profile.id) {
+        <a
+          [routerLink]="['/users', profile.id]"
+          [attr.aria-current]="profile.id === id() ? 'page' : null"
+        >
+          <strong>{{ profile.name }}</strong>
+          <span>{{ profile.role }}</span>
+        </a>
+      }
+    </div>
+  </section>
+</main>

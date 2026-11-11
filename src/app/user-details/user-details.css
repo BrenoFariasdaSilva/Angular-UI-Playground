@@ -1,0 +1,96 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.user-details-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-details-hero,
+.profile-card,
+.profile-grid a {
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1rem;
+  background: var(--p-content-background);
+}
+
+.user-details-hero {
+  padding: clamp(2rem, 6vw, 4rem);
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 60%),
+    var(--p-content-background);
+  box-shadow: 0 1rem 3rem rgb(15 23 42 / 8%);
+}
+
+.eyebrow,
+.route-label {
+  color: var(--p-primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.user-details-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+}
+
+.user-details-hero > p:last-child,
+.profile-card > p,
+.profile-grid span {
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+}
+
+.profile-card,
+.user-details-page > section + section {
+  margin-top: 3rem;
+}
+
+.profile-card {
+  padding: 1.5rem;
+}
+
+.profile-card h2 {
+  margin: 0.5rem 0;
+}
+
+.profile-card > .profile-role {
+  color: var(--p-primary-color);
+  font-weight: 700;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.profile-grid a {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--p-text-color);
+  padding: 1.25rem;
+  text-decoration: none;
+}
+
+.profile-grid a:hover,
+.profile-grid a:focus-visible {
+  border-color: var(--p-primary-color);
+  box-shadow: 0 0 0 0.2rem var(--p-primary-100);
+  outline: none;
+}
+
+.profile-grid a[aria-current='page'] {
+  border-color: var(--p-primary-color);
+}
+
+@media (max-width: 640px) {
+  .user-details-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
