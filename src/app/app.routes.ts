@@ -12,6 +12,7 @@ import { TailwindConcepts } from './tailwind-concepts/tailwind-concepts';
 import { Responsiveness } from './responsiveness/responsiveness';
 import { primengComponentRoutes } from './primeng-components/primeng-components.routes';
 import { rxjsRoutes } from './rxjs/rxjs.routes';
+import { userResolver } from './user-details/user.resolver';
 
 export const routes: Routes = [
   { path: '', component: Login, pathMatch: 'full' },
@@ -59,6 +60,12 @@ export const routes: Routes = [
       import('./remote-data-explorer/remote-data-explorer').then((m) => m.RemoteDataExplorer),
     canActivate: [authGuard],
     pathMatch: 'full',
+  },
+  {
+    path: 'users/:id',
+    loadComponent: () => import('./user-details/user-details').then((m) => m.UserDetails),
+    canActivate: [authGuard],
+    resolve: { user: userResolver },
   },
   ...primengComponentRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: '**', redirectTo: '', pathMatch: 'full' },

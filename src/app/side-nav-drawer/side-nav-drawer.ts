@@ -23,6 +23,7 @@ export class SideNavDrawer {
     { label: 'Reactive Form', path: '/reactive-form' },
     { label: 'Remote Data Explorer', path: '/remote-data' },
     { label: 'Responsiveness', path: '/responsiveness' },
+    { label: 'Route-driven User Details', path: '/users/ada' },
     { label: 'RxJS', path: '/rxjs' },
     { label: 'Tailwind Concepts', path: '/tailwind-concepts' },
     { label: 'Template Form', path: '/template-form' },

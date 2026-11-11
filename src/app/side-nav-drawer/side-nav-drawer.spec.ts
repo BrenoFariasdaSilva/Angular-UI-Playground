@@ -34,6 +34,7 @@ describe('SideNavDrawer', () => {
       'Reactive Form',
       'Remote Data Explorer',
       'Responsiveness',
+      'Route-driven User Details',
       'RxJS',
       'Tailwind Concepts',
       'Template Form',
