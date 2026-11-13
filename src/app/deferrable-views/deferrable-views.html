@@ -1,0 +1,34 @@
+<main class="deferrable-views-page">
+  <section class="deferrable-views-hero">
+    <p class="eyebrow">Angular performance</p>
+    <h1>Deferrable Views</h1>
+    <p>
+      Use <code>&#64;defer</code> to split a standalone component into its own chunk and load it
+      only when the user needs it.
+    </p>
+  </section>
+
+  <section class="defer-explainer" aria-labelledby="defer-flow-title">
+    <h2 id="defer-flow-title">What happens here</h2>
+    <ol>
+      <li>The page renders its essential content immediately.</li>
+      <li>Angular prefetches the preview component while the browser is idle.</li>
+      <li>Clicking the placeholder loads and displays the deferred component.</li>
+    </ol>
+  </section>
+
+  <section class="defer-demo" aria-labelledby="defer-demo-title">
+    <h2 id="defer-demo-title">Try the deferred preview</h2>
+    <div aria-live="polite" aria-atomic="true">
+      @defer (on interaction(loadPreview); prefetch on idle) {
+        <app-deferred-preview />
+      } @placeholder {
+        <button #loadPreview type="button">Load the deferred preview</button>
+      } @loading (after 100ms; minimum 500ms) {
+        <p class="status" role="status">Loading the preview…</p>
+      } @error {
+        <p class="status error" role="alert">The preview could not be loaded.</p>
+      }
+    </div>
+  </section>
+</main>
