@@ -25,6 +25,7 @@ describe('SideNavDrawer', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
       'Home',
       'Angular Concepts',
+      'Deferrable Views',
       'Dialog',
       'Infinite Scroll',
       'Pagination',

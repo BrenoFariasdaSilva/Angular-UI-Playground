@@ -14,6 +14,7 @@ export class SideNavDrawer {
   readonly navigation = [
     { label: 'Home', path: '/home' },
     { label: 'Angular Concepts', path: '/misc' },
+    { label: 'Deferrable Views', path: '/defer' },
     { label: 'Dialog', path: '/dialog' },
     { label: 'Infinite Scroll', path: '/primeng-components/infinite-scroll' },
     { label: 'Pagination', path: '/primeng-components/pagination' },

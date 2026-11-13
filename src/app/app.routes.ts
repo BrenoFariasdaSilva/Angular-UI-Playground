@@ -19,6 +19,13 @@ export const routes: Routes = [
   { path: 'home', component: HomePage, canActivate: [authGuard], pathMatch: 'full' },
   { path: 'next-page', component: NextPage, canActivate: [authGuard], pathMatch: 'full' },
   {
+    path: 'defer',
+    loadComponent: () =>
+      import('./deferrable-views/deferrable-views').then((m) => m.DeferrableViews),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
     path: 'dialog',
     loadComponent: () => import('./dialog/dialog').then((m) => m.Dialog),
     canActivate: [authGuard],
