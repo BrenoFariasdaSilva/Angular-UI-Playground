@@ -38,7 +38,6 @@
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Angular-UI-Playground)
 ![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Angular-UI-Playground.svg)
 [![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground)
-[![GitHub Repository Size](https://img.shields.io/github/repo-size/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground)
 [![Open Issues](https://img.shields.io/github/issues/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/issues)
 [![Closed Issues](https://img.shields.io/github/issues-closed/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/issues?q=is%3Aissue+is%3Aclosed)
 [![Open Pull Requests](https://img.shields.io/github/issues-pr/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/pulls)
