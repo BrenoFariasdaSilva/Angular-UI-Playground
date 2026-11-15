@@ -37,20 +37,6 @@
 ![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Angular-UI-Playground)
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Angular-UI-Playground)
 ![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Angular-UI-Playground.svg)
-
-</div>
-
-<div align="center">
-
-![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasdaSilva/Angular-UI-Playground/main)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Angular-UI-Playground)
-![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Angular-UI-Playground)
-![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Angular-UI-Playground.svg)
 [![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground)
 [![GitHub Repository Size](https://img.shields.io/github/repo-size/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground)
 [![Open Issues](https://img.shields.io/github/issues/BrenoFariasdaSilva/Angular-UI-Playground)](https://github.com/BrenoFariasdaSilva/Angular-UI-Playground/issues)
@@ -63,7 +49,6 @@
 ![Language](https://img.shields.io/badge/Language-TypeScript-3178C6)
 ![UI](https://img.shields.io/badge/UI-PrimeNG-1b5fa0)
 ![Styling](https://img.shields.io/badge/Styling-Tailwind%20CSS-06B6D4)
-
 ![Repobeats Statistics](https://repobeats.axiom.co/api/embed/50e34b4bf3f62c8a5029d4db29b8c1ec5acca681.svg)
 
 </div>
