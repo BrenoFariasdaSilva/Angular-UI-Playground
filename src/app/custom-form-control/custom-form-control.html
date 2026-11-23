@@ -1,0 +1,35 @@
+<main class="custom-form-control-page">
+  <section class="custom-form-control-hero">
+    <p class="eyebrow">Angular forms</p>
+    <h1>Custom Form Controls</h1>
+    <p>
+      A custom control can work with Angular forms when it implements the
+      <code>ControlValueAccessor</code> contract.
+    </p>
+  </section>
+
+  <section class="control-explainer" aria-labelledby="control-flow-title">
+    <h2 id="control-flow-title">How the rating joins the form</h2>
+    <ol>
+      <li><code>writeValue()</code> receives the value held by the form control.</li>
+      <li>The rating calls Angular’s change callback when a star is selected.</li>
+      <li>The form’s validator decides whether the selected rating is valid.</li>
+    </ol>
+  </section>
+
+  <section class="control-workbench" aria-labelledby="rating-title">
+    <h2 id="rating-title">Try the custom rating control</h2>
+    <form [formGroup]="feedbackForm" (ngSubmit)="submit()" novalidate>
+      <app-star-rating formControlName="rating" />
+      @if (feedbackForm.controls.rating.invalid && feedbackForm.controls.rating.touched) {
+        <p class="error" role="alert">Choose at least one star.</p>
+      }
+      <button type="submit">Submit rating</button>
+      @if (submitted()) {
+        <p class="success" role="status">
+          Thanks for rating {{ feedbackForm.controls.rating.value }} out of 5.
+        </p>
+      }
+    </form>
+  </section>
+</main>

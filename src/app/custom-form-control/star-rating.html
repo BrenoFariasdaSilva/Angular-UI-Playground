@@ -1,0 +1,15 @@
+<fieldset class="star-rating" [disabled]="disabled">
+  <legend>Rate your experience</legend>
+  <div class="star-list">
+    @for (star of stars; track star) {
+      <button
+        type="button"
+        [attr.aria-label]="'Rate ' + star + ' out of 5'"
+        [attr.aria-pressed]="value === star"
+        (click)="select(star)"
+      >
+        <span aria-hidden="true">{{ star <= value ? '★' : '☆' }}</span>
+      </button>
+    }
+  </div>
+</fieldset>

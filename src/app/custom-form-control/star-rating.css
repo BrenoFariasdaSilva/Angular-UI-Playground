@@ -1,0 +1,38 @@
+.star-rating {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  color: var(--p-text-color);
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.star-list {
+  display: flex;
+  gap: 0.35rem;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  color: var(--p-primary-color);
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.2rem;
+}
+
+button:focus-visible {
+  border-radius: 0.35rem;
+  box-shadow: 0 0 0 0.2rem var(--p-primary-100);
+  outline: none;
+}
+
+:host([disabled]) button,
+fieldset:disabled button {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

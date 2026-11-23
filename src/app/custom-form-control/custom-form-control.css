@@ -1,0 +1,102 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.custom-form-control-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.custom-form-control-hero,
+.control-explainer,
+.control-workbench {
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1rem;
+  background: var(--p-content-background);
+}
+
+.custom-form-control-hero {
+  padding: clamp(2rem, 6vw, 4rem);
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 60%),
+    var(--p-content-background);
+  box-shadow: 0 1rem 3rem rgb(15 23 42 / 8%);
+}
+
+.eyebrow {
+  color: var(--p-primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.custom-form-control-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+}
+
+.custom-form-control-hero > p:last-child,
+.control-explainer li {
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+}
+
+.custom-form-control-page > section + section {
+  margin-top: 3rem;
+}
+
+.control-explainer,
+.control-workbench {
+  padding: 1.5rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+form > button {
+  justify-self: start;
+  border: 1px solid var(--p-primary-color);
+  border-radius: 0.5rem;
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+}
+
+.error,
+.success {
+  font-weight: 700;
+  margin: 0;
+}
+
+.error {
+  color: var(--p-red-500);
+}
+
+.success {
+  color: var(--p-green-600);
+}
+
+@media (max-width: 640px) {
+  .custom-form-control-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
