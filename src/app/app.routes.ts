@@ -33,6 +33,13 @@ export const routes: Routes = [
   },
   ...miscRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   ...pipeRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
+  {
+    path: 'custom-form-control',
+    loadComponent: () =>
+      import('./custom-form-control/custom-form-control').then((m) => m.CustomFormControl),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
   { path: 'reactive-form', component: ReactiveForm, canActivate: [authGuard], pathMatch: 'full' },
   ...rxjsRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   { path: 'template-form', component: TemplateForm, canActivate: [authGuard], pathMatch: 'full' },
