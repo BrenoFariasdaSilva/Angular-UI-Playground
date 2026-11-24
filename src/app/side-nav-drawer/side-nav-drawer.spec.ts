@@ -28,6 +28,7 @@ describe('SideNavDrawer', () => {
       'Custom Form Controls',
       'Deferrable Views',
       'Dialog',
+      'Dynamic Form Arrays',
       'Infinite Scroll',
       'Pagination',
       'Pipes',

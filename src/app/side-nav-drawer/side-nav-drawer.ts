@@ -17,6 +17,7 @@ export class SideNavDrawer {
     { label: 'Custom Form Controls', path: '/custom-form-control' },
     { label: 'Deferrable Views', path: '/defer' },
     { label: 'Dialog', path: '/dialog' },
+    { label: 'Dynamic Form Arrays', path: '/dynamic-form-array' },
     { label: 'Infinite Scroll', path: '/primeng-components/infinite-scroll' },
     { label: 'Pagination', path: '/primeng-components/pagination' },
     { label: 'Pipes', path: '/pipes' },

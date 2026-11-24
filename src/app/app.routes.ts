@@ -26,6 +26,13 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'dynamic-form-array',
+    loadComponent: () =>
+      import('./dynamic-form-array/dynamic-form-array').then((m) => m.DynamicFormArray),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
     path: 'dialog',
     loadComponent: () => import('./dialog/dialog').then((m) => m.Dialog),
     canActivate: [authGuard],
