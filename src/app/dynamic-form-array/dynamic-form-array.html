@@ -1,0 +1,49 @@
+<main class="dynamic-form-array-page">
+  <section class="dynamic-form-array-hero">
+    <p class="eyebrow">Angular Reactive Forms</p>
+    <h1>Dynamic Form Arrays</h1>
+    <p>
+      Use <code>FormArray</code> when a form needs an unknown number of controls, such as skills,
+      contacts, or line items.
+    </p>
+  </section>
+
+  <section class="array-explainer" aria-labelledby="array-flow-title">
+    <h2 id="array-flow-title">How the controls change</h2>
+    <ol>
+      <li>Each skill is its own <code>FormControl</code> inside the array.</li>
+      <li>Adding a skill pushes a new control into the same form model.</li>
+      <li>Removing a skill removes its control and its validation state.</li>
+    </ol>
+  </section>
+
+  <section class="array-workbench" aria-labelledby="skills-title">
+    <h2 id="skills-title">Build a skills list</h2>
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div formArrayName="skills" class="skill-list">
+        @for (skill of skills.controls; track $index; let index = $index) {
+          <label>
+            <span>Skill {{ index + 1 }}</span>
+            <div class="skill-input">
+              <input [formControlName]="index" placeholder="For example, Angular" />
+              <button type="button" [disabled]="skills.length === 1" (click)="removeSkill(index)">
+                Remove
+              </button>
+            </div>
+            @if (skill.invalid && skill.touched) {
+              <small>Enter at least 2 characters.</small>
+            }
+          </label>
+        }
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="secondary" (click)="addSkill()">Add skill</button>
+        <button type="submit">Save skills</button>
+      </div>
+      @if (submitted()) {
+        <p class="success" role="status">Saved {{ skills.length }} skill entries for this demo.</p>
+      }
+    </form>
+  </section>
+</main>
