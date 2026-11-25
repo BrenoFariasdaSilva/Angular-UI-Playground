@@ -1,0 +1,31 @@
+<main class="model-inputs-page">
+  <section class="model-inputs-hero">
+    <p class="eyebrow">Angular components</p>
+    <h1>Model Inputs</h1>
+    <p>
+      A component can expose a writable <code>model()</code> input so a parent can use concise
+      two-way binding without defining a separate output.
+    </p>
+  </section>
+
+  <section class="model-explainer" aria-labelledby="model-flow-title">
+    <h2 id="model-flow-title">How the values stay in sync</h2>
+    <ol>
+      <li>The parent owns a <code>quantity</code> signal.</li>
+      <li>The child receives it with <code>[(quantity)]</code>.</li>
+      <li>Calling <code>quantity.update()</code> in the child updates the parent signal.</li>
+    </ol>
+  </section>
+
+  <section class="model-workbench" aria-labelledby="picker-title">
+    <h2 id="picker-title">Try the quantity picker</h2>
+    <div class="product-row">
+      <div>
+        <h3>Angular learning notebook</h3>
+        <p>$29 each</p>
+      </div>
+      <app-quantity-picker [(quantity)]="quantity" />
+    </div>
+    <p class="total">Total: ${{ total() }}</p>
+  </section>
+</main>

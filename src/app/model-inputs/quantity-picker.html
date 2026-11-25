@@ -1,0 +1,12 @@
+<div class="quantity-picker" aria-label="Quantity picker">
+  <button
+    type="button"
+    aria-label="Decrease quantity"
+    [disabled]="quantity() === 1"
+    (click)="decrement()"
+  >
+    −
+  </button>
+  <output aria-live="polite">{{ quantity() }}</output>
+  <button type="button" aria-label="Increase quantity" (click)="increment()">+</button>
+</div>
