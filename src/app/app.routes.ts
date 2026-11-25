@@ -41,6 +41,12 @@ export const routes: Routes = [
   ...miscRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   ...pipeRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   {
+    path: 'model-inputs',
+    loadComponent: () => import('./model-inputs/model-inputs').then((m) => m.ModelInputs),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
     path: 'custom-form-control',
     loadComponent: () =>
       import('./custom-form-control/custom-form-control').then((m) => m.CustomFormControl),

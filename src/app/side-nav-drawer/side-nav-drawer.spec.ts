@@ -30,6 +30,7 @@ describe('SideNavDrawer', () => {
       'Dialog',
       'Dynamic Form Arrays',
       'Infinite Scroll',
+      'Model Inputs',
       'Pagination',
       'Pipes',
       'Price Playground',
