@@ -41,6 +41,13 @@ export const routes: Routes = [
   ...miscRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   ...pipeRoutes.map((route) => ({ ...route, canActivate: [authGuard] })),
   {
+    path: 'content-projection',
+    loadComponent: () =>
+      import('./content-projection/content-projection').then((m) => m.ContentProjection),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
     path: 'model-inputs',
     loadComponent: () => import('./model-inputs/model-inputs').then((m) => m.ModelInputs),
     canActivate: [authGuard],

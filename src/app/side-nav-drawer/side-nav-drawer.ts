@@ -14,6 +14,7 @@ export class SideNavDrawer {
   readonly navigation = [
     { label: 'Home', path: '/home' },
     { label: 'Angular Concepts', path: '/misc' },
+    { label: 'Content Projection', path: '/content-projection' },
     { label: 'Custom Form Controls', path: '/custom-form-control' },
     { label: 'Deferrable Views', path: '/defer' },
     { label: 'Dialog', path: '/dialog' },

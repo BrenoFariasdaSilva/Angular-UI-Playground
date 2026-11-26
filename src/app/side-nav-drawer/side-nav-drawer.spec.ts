@@ -25,6 +25,7 @@ describe('SideNavDrawer', () => {
     expect(component.navigation.map((item) => item.label)).toEqual([
       'Home',
       'Angular Concepts',
+      'Content Projection',
       'Custom Form Controls',
       'Deferrable Views',
       'Dialog',
