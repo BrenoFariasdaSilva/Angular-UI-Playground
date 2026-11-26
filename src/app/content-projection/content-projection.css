@@ -1,0 +1,94 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.content-projection-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content-projection-hero,
+.projection-explainer {
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1rem;
+  background: var(--p-content-background);
+}
+
+.content-projection-hero {
+  padding: clamp(2rem, 6vw, 4rem);
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 60%),
+    var(--p-content-background);
+  box-shadow: 0 1rem 3rem rgb(15 23 42 / 8%);
+}
+
+.eyebrow,
+app-project-card [card-kicker] {
+  color: var(--p-primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content-projection-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+}
+
+.content-projection-hero > p:last-child,
+.projection-explainer li {
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+}
+
+.content-projection-page > section + section {
+  margin-top: 3rem;
+}
+
+.projection-explainer {
+  padding: 1.5rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+app-project-card [card-title] {
+  margin: 0.4rem 0 0;
+}
+
+app-project-card [card-action] {
+  border-radius: 999px;
+  background: var(--p-primary-100);
+  color: var(--p-primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .content-projection-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+.project-card {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1rem;
+  background: var(--p-content-background);
+  padding: 1.25rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-content {
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+}
+
+.card-footer {
+  border-top: 1px solid var(--p-content-border-color);
+  color: var(--p-text-muted-color);
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}

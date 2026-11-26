@@ -1,0 +1,15 @@
+<article class="project-card">
+  <header class="card-header">
+    <div>
+      <ng-content select="[card-kicker]" />
+      <ng-content select="[card-title]">Untitled project</ng-content>
+    </div>
+    <ng-content select="[card-action]" />
+  </header>
+  <div class="card-content">
+    <ng-content />
+  </div>
+  <footer class="card-footer">
+    <ng-content select="[card-footer]" />
+  </footer>
+</article>

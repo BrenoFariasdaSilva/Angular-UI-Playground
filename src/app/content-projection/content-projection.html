@@ -1,0 +1,46 @@
+<main class="content-projection-page">
+  <section class="content-projection-hero">
+    <p class="eyebrow">Angular components</p>
+    <h1>Content Projection</h1>
+    <p>
+      Use <code>ng-content</code> to let a reusable component provide structure while its parent
+      provides the specific content.
+    </p>
+  </section>
+
+  <section class="projection-explainer" aria-labelledby="projection-flow-title">
+    <h2 id="projection-flow-title">How the card receives content</h2>
+    <ol>
+      <li>The card declares <code>ng-content</code> placeholders.</li>
+      <li>Selectors such as <code>[card-title]</code> place matching elements in named slots.</li>
+      <li>Unmatched elements are projected into the card body.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="cards-title">
+    <h2 id="cards-title">One layout, different content</h2>
+    <div class="card-grid">
+      <app-project-card>
+        <p card-kicker>Angular</p>
+        <h3 card-title>Learning dashboard</h3>
+        <span card-action>In progress</span>
+        <p>
+          The default slot holds this description, while the card keeps the same header and footer
+          structure.
+        </p>
+        <span card-footer>Last reviewed today</span>
+      </app-project-card>
+
+      <app-project-card>
+        <p card-kicker>PrimeNG</p>
+        <h3 card-title>Component gallery</h3>
+        <span card-action>Ready to explore</span>
+        <p>
+          This card uses the identical component API but supplies different text for every named
+          slot.
+        </p>
+        <span card-footer>Includes interactive examples</span>
+      </app-project-card>
+    </div>
+  </section>
+</main>
