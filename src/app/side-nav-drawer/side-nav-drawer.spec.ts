@@ -45,6 +45,7 @@ describe('SideNavDrawer', () => {
       'Template Form',
       'Themes',
       'Validators',
+      'View Queries',
     ]);
   });
 

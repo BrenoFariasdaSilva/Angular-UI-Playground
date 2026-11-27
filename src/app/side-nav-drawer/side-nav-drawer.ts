@@ -34,5 +34,6 @@ export class SideNavDrawer {
     { label: 'Template Form', path: '/template-form' },
     { label: 'Themes', path: '/themes' },
     { label: 'Validators', path: '/validators' },
+    { label: 'View Queries', path: '/view-queries' },
   ];
 }

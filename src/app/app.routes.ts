@@ -48,6 +48,12 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'view-queries',
+    loadComponent: () => import('./view-queries/view-queries').then((m) => m.ViewQueries),
+    canActivate: [authGuard],
+    pathMatch: 'full',
+  },
+  {
     path: 'model-inputs',
     loadComponent: () => import('./model-inputs/model-inputs').then((m) => m.ModelInputs),
     canActivate: [authGuard],
