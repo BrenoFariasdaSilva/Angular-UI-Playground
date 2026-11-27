@@ -1,0 +1,121 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.view-queries-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.view-queries-hero,
+.query-explainer,
+.query-workbench {
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 1rem;
+  background: var(--p-content-background);
+}
+
+.view-queries-hero {
+  padding: clamp(2rem, 6vw, 4rem);
+  background:
+    radial-gradient(ellipse at top left, var(--p-primary-100), transparent 60%),
+    var(--p-content-background);
+  box-shadow: 0 1rem 3rem rgb(15 23 42 / 8%);
+}
+
+.eyebrow {
+  color: var(--p-primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.view-queries-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+}
+
+.view-queries-hero > p:last-child,
+.query-explainer li,
+.query-workbench > p {
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+}
+
+.view-queries-page > section + section {
+  margin-top: 3rem;
+}
+
+.query-explainer,
+.query-workbench {
+  padding: 1.5rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  margin-top: 1.25rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--p-content-border-color);
+  border-radius: 0.5rem;
+  background: var(--p-content-background);
+  color: var(--p-text-color);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+}
+
+button.secondary {
+  background: var(--p-content-border-color);
+  color: var(--p-text-color);
+}
+
+.preview {
+  margin-bottom: 0;
+  color: var(--p-primary-color) !important;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .view-queries-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+}

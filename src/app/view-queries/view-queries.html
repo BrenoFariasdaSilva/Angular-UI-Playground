@@ -1,0 +1,40 @@
+<main class="view-queries-page">
+  <section class="view-queries-hero">
+    <p class="eyebrow">Angular components</p>
+    <h1>View Queries</h1>
+    <p>
+      Use <code>viewChild()</code> to access an element declared in this component's template when a
+      small DOM action, such as moving focus, is needed.
+    </p>
+  </section>
+
+  <section class="query-explainer" aria-labelledby="query-flow-title">
+    <h2 id="query-flow-title">How this query works</h2>
+    <ol>
+      <li>The input is marked with the <code>#searchInput</code> template reference.</li>
+      <li><code>viewChild.required()</code> returns a signal for that input.</li>
+      <li>The actions read the signal and focus the native input element.</li>
+    </ol>
+  </section>
+
+  <section class="query-workbench" aria-labelledby="focus-demo-title">
+    <h2 id="focus-demo-title">Try the focus action</h2>
+    <p>Write a note, move focus away, then use the buttons to return to the input.</p>
+    <label for="learning-note">Learning note</label>
+    <input
+      #searchInput
+      id="learning-note"
+      type="text"
+      [value]="searchTerm()"
+      (input)="searchTerm.set($any($event.target).value)"
+      placeholder="For example: query template elements"
+    />
+    <div class="actions">
+      <button type="button" (click)="focusSearch()">Focus input</button>
+      <button type="button" class="secondary" (click)="clearSearch()">Clear and focus</button>
+    </div>
+    @if (searchTerm()) {
+      <p class="preview">Current note: {{ searchTerm() }}</p>
+    }
+  </section>
+</main>
