@@ -19,6 +19,7 @@ export class SideNavDrawer {
     { label: 'Deferrable Views', path: '/defer' },
     { label: 'Dialog', path: '/dialog' },
     { label: 'Dynamic Form Arrays', path: '/dynamic-form-array' },
+    { label: 'Input Transforms', path: '/input-transforms' },
     { label: 'Infinite Scroll', path: '/primeng-components/infinite-scroll' },
     { label: 'Model Inputs', path: '/model-inputs' },
     { label: 'Pagination', path: '/primeng-components/pagination' },

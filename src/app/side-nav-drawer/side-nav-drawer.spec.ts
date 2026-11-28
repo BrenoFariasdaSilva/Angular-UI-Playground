@@ -30,6 +30,7 @@ describe('SideNavDrawer', () => {
       'Deferrable Views',
       'Dialog',
       'Dynamic Form Arrays',
+      'Input Transforms',
       'Infinite Scroll',
       'Model Inputs',
       'Pagination',
