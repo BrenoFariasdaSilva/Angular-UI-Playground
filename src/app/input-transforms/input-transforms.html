@@ -1,0 +1,28 @@
+<main class="input-transforms-page">
+  <section class="input-transforms-hero">
+    <p class="eyebrow">Angular components</p>
+    <h1>Input Transforms</h1>
+    <p>
+      Transform values at the boundary of a component so its template receives the type it expects.
+    </p>
+  </section>
+
+  <section class="transform-explainer" aria-labelledby="transform-flow-title">
+    <h2 id="transform-flow-title">What Angular transforms</h2>
+    <ol>
+      <li>
+        <code>numberAttribute</code> converts the text attribute <code>weeklyMinutes="90"</code>.
+      </li>
+      <li><code>booleanAttribute</code> treats <code>showReminder="false"</code> as false.</li>
+      <li>The reusable card reads typed signals without parsing values itself.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="goals-title">
+    <h2 id="goals-title">Compare attribute values</h2>
+    <div class="goal-grid">
+      <app-reading-goal weeklyMinutes="90" showReminder="false" />
+      <app-reading-goal weeklyMinutes="30" showReminder />
+    </div>
+  </section>
+</main>

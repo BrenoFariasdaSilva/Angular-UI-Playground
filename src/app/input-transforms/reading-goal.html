@@ -1,0 +1,9 @@
+<article class="reading-goal">
+  <p class="goal-label">Weekly learning goal</p>
+  <strong>{{ weeklyMinutes() }} minutes</strong>
+  @if (showReminder()) {
+    <p class="reminder">Reminder enabled</p>
+  } @else {
+    <p class="reminder">Reminder disabled</p>
+  }
+</article>
